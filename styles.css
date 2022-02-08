@@ -1,0 +1,38 @@
+:root{
+    /* custom properties in here */
+}
+*{
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    align-items: center;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: flex-end;
+}
+
+.header__list{
+    display: flex;
+}
+
+.header__list-item {
+    list-style-type: none;
+}
+
+.header__list-link {
+    color: #303030;
+    text-decoration: none;
+    padding: 10px 30px;
+}
+
+.section{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}

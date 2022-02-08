@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <header class = "header">
+    <header class="header">
         <nav>
-            <ul class = "header__list">
-                <li class = "header__list-item">
-                    <a class="header__list-link" href="#">Link 1</a>
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a class="header__list-link" href="#">Other Work</a> <!-- graphic design and artwork -->
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">Link 2</a>
+                    <a class="header__list-link" href="#">About</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">Link 3</a>
+                    <a class="header__list-link" href="#">Resume</a>
+                </li>
+                <li class="header__list-item">
+                    <a class="header__list-link" href="#">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
+    <main>
+        <!-- note to self: double check class names as i code
+        do my class names reflect appropriate structure and info? -->
+
+        <div class="section">
+            <h1 class="section__title"> jillian tracy</h1>
+            <p class=section__text> user experience and interaction design student at drexel university</p>
+        </div>
+        <div class="work">
+            <h1 class = "work__header">my work</h1>
+            <div class = "project-container">
+                <div class = "project">
+                    <p class = "project__title">Podcast But Outside</p>
+                    <p class = "project__caption">Interface Redesign</p>
+                    <img class = "project__img" alt = "pbo" scr = ""/> <!-- TO DO: populate with image -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <nav>
+            <h2>Contact</h2>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <a class="footer__list-link" href="#">Email</a>
+                </li>
+                <li class="footer__list-item">
+                    <a class="footer__list-link" href="#">LinkedIn</a>
+                </li>
+            </ul>
+        </nav>
+        <p>&copy;2022 Jillian Tracy</p>
+    </footer>
 </body>
+
 </html>
