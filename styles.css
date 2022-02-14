@@ -36,3 +36,13 @@
     grid-template-columns: 1fr;
     justify-items: center;
 }
+
+/* this isnt working, prob bc i am missing something elsewhere or wrong class */
+@media screen and (min-width: 700px ){
+    .mobile-nav{
+        display: none;
+    }
+    .desktop-nav{
+        display: block;
+    }
+}
