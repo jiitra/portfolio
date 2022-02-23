@@ -1,5 +1,6 @@
 :root{
     /* custom properties in here */
+    --background-color: #f5f5f5;
 }
 *{
     border: none;
@@ -8,12 +9,18 @@
     padding: 0;
 }
 
-.header {
+body{
+    background-color: var(--background-color);
+}
+
+.header__wrapper{
     align-items: center;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    padding: 1.5rem /*25px*/;
 }
 
 .header__list{
@@ -27,7 +34,7 @@
 .header__list-link {
     color: #303030;
     text-decoration: none;
-    padding: 10px 30px;
+    padding: 0.6rem 1.8rem /*10px 30px*/; 
 }
 
 .section{
@@ -37,12 +44,54 @@
     justify-items: center;
 }
 
-/* this isnt working, prob bc i am missing something elsewhere or wrong class */
-@media screen and (min-width: 700px ){
+.section__container{
+    display: flex;
+    align-items: center;
+}
+.section__img{
+    max-width: 6.25rem /*100px*/;
+    margin: 0 1.5rem;
+
+    /*drop-shadow(offset-x offset-y blur-radius color)*/
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.4));
+}
+
+.section__text{
+    margin: 1.5rem;
+    padding-bottom: 6.25rem;
+}
+
+/* At < 700px screen size, hide desktop nav & display mobile */
+@media screen and (max-width: 700px ){
     .mobile-nav{
-        display: none;
-    }
-    .desktop-nav{
         display: block;
     }
+    .desktop-nav{
+        display: none;
+    }
+}
+
+.project__img{
+    max-width: 31.25rem;
+}
+
+.project-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.8rem /*30px*/ 0;
+}
+
+/* sets max width for any content in wrapper
+so when this wrapper is applied, content has nice uniform container and is responsive */
+.wrapper{
+    margin: 0 auto;
+    max-width: 75rem /*1200px*/;
+}
+
+.footer{
+    margin: px 0;
+}
+
+.footer__list-item{
+    list-style-type: none;
 }

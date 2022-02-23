@@ -5,81 +5,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jillian Tracy</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <header class="header">
-        <!-- mobile nav -->
-        <nav class = "mobile-nav">
-            
-        </nav>
-        <!-- desktop nav -->
-        <nav class = "desktop-nav">
-            <ul class="header__list">
-                <li class="header__list-item">
-                    <a class="header__list-link" href="#footer">Other Work</a> <!-- graphic design and artwork -->
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-link" href="#">About</a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-link" href="#">Resume</a>
-                </li>
-                <li class="header__list-item">
-                    <a class="header__list-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="wrapper header__wrapper">
+            <a class="header__logo" href="index.html">Jillian Tracy</a>
+            <!-- mobile nav -->
+            <nav class="mobile-nav">
+
+            </nav>
+            <!-- desktop nav -->
+            <nav class="desktop-nav">
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a class="header__list-link" href="other.html">Other Work</a>
+                        <!-- graphic design and artwork -->
+                    </li>
+                    <li class="header__list-item">
+                        <a class="header__list-link" href="about.html">About</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a class="header__list-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a class="header__list-link" href="#footer">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <!-- note to self: double check class names as i code
+        <div class="wrapper">
+            <!-- note to self: double check class names as i code (BEM)
         do my class names reflect appropriate structure and info? -->
 
-        <div class="section">
-            <h1 class="section__title"> jillian tracy</h1>
-            <p class=section__text> user experience and interaction design student at drexel university</p>
-        </div>
-        <div class="work">
-            <h1 class = "work__header">my work</h1>
-            <div class = "project-container">
-                <div class = "project">
-                    <p class = "project__title">Podcast But Outside</p>
-                    <p class = "project__caption">Interface Redesign</p>
-                    <img class = "project__img" alt = "pbo" scr = ""/> <!-- TO DO: populate with image -->
+            <div class="section">
+                <div class="section__container">
+                    <img class="section__img" alt="Jill's Memoji" src="img/favicon.png" />
+                    <h1 class="section__title"> jillian tracy</h1>
                 </div>
+                <p class=section__text> user experience and interaction design student at drexel university</p>
             </div>
-            <div class = "project-container">
-                <div class = "project">
-                    <p class = "project__title">Web Traffic</p>
-                    <p class = "project__caption">Concept Creation & Prototype</p>
-                    <img class = "project__img" alt = "webtraffic" scr = ""/> <!-- TO DO: populate with image -->
+            <div class="work">
+
+                <h1 class="work__header">my work</h1>
+
+                <div class="project-container">
+
+                    <div class="project-text">
+                        <h3 class="project-number">Project 01</h3>
+                        <h2 class="project__title">Podcast But Outside</h2>
+                        <p class="project__caption">Interface Redesign</p>
+                    </div>
+
+                    <div class="project-cover">
+                        <img class="project__img" alt="Podcast But Outside Project Cover" src="img/pbo-cover.jpg" />
+                    </div>
+
                 </div>
-            </div>
-            <div class = "project-container">
-                <div class = "project">
-                    <p class = "project__title">Spike's Underwater Adventure</p>
-                    <p class = "project__caption">App Development, Graphic Design Lead</p>
-                    <img class = "project__img" alt = "spike" scr = ""/> <!-- TO DO: populate with image -->
+
+                <div class="project-container">
+
+                    <div class="project-text">
+                        <h3 class="project-number">Project 02</h3>
+                        <h2 class="project__title">Web Traffic</h2>
+                        <p class="project__caption">Concept Creation & Prototype</p>
+                    </div>
+
+                    <div class="project-cover">
+                        <img class="project__img" alt="Web Traffic Project Cover" src="img/webtraffic-cover.jpg" />
+                    </div>
+
                 </div>
+
+                <div class="project-container">
+
+                    <div class="project-text">
+                        <h3 class="project-number">Project 03</h3>
+                        <h2 class="project__title">Spike's Underwater Adventure</h2>
+                        <p class="project__caption">App Development, Graphic Design Lead</p>
+                    </div>
+
+                    <div class="project-cover">
+                        <img class="project__img" alt="Spike's Underwater Adventure Project Cover"
+                            src="img/spike-cover.jpg" />
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
     </main>
-    <footer class="footer">
-        <nav>
-            <h2>Contact</h2>
-            <ul class="footer__list">
-                <li class="footer__list-item">
-                    <a class="footer__list-link" href="#">Email</a>
-                </li>
-                <li class="footer__list-item">
-                    <a class="footer__list-link" href="#">LinkedIn</a>
-                </li>
-            </ul>
-        </nav>
-        <p>&copy;2022 Jillian Tracy</p>
+    <footer class="footer" id="footer">
+        <div class="wrapper">
+            <nav>
+                <h2>Contact</h2>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" href="#">Email</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" href="#">LinkedIn</a>
+                    </li>
+                </ul>
+            </nav>
+            <p>&copy;2022 Jillian Tracy</p>
+        </div>
     </footer>
 </body>
 
