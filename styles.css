@@ -7,6 +7,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    font-family: sans-serif;
+    text-transform: lowercase; /*this might look lazy but... why do i like it??*/
 }
 
 body{
@@ -25,6 +28,8 @@ body{
 
 .header__list{
     display: flex;
+
+    text-transform: lowercase;
 }
 
 .header__list-item {
@@ -32,8 +37,8 @@ body{
 }
 
 .header__list-link {
-    color: #303030;
-    text-decoration: none;
+    /* color: #303030; */
+    /* text-decoration: none; */
     padding: 0.6rem 1.8rem /*10px 30px*/; 
 }
 
@@ -71,14 +76,42 @@ body{
     }
 }
 
-.project__img{
-    max-width: 31.25rem;
+.project-number{
+    text-decoration: underline;
+}
+.project__cover{
+    overflow: hidden;
 }
 
-.project-container{
-    display: flex;
-    justify-content: space-between;
-    margin: 1.8rem /*30px*/ 0;
+.project__img{
+    max-width: 31.25rem;
+
+    transition: transform .5s ease;
+}
+
+.project__cover:hover .project__img{
+    transform: scale(1.1);
+}
+
+.work{
+    margin: 0 auto;
+    max-width: 50rem;
+}
+
+.project__container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-items: center;
+    gap: 2rem;
+    margin: 4rem /*30px*/ 0;
+}
+
+.project__text{
+    padding-right: 1rem;
+}
+
+.project__title{
+    margin: 0.5rem 0;
 }
 
 /* sets max width for any content in wrapper
@@ -89,9 +122,47 @@ so when this wrapper is applied, content has nice uniform container and is respo
 }
 
 .footer{
-    margin: px 0;
+    margin: 2rem 0;
 }
 
 .footer__list-item{
     list-style-type: none;
+}
+
+/*RESUME*/
+
+.resume{
+    margin: 0 auto;
+    max-width: 40rem;
+}
+
+.resume__header{
+    margin: 2rem 0;
+    text-decoration:underline;
+}
+
+.resume__section{
+    margin: 4rem 0;
+}
+
+.resume__section-title{
+    margin: 1rem 0;
+}
+
+.resume__section-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.resume__section-col-2{
+    text-align: right;
+}
+
+.resume__list{
+    margin: 1rem 3rem;
+}
+
+.resume__list-item{
+    margin-bottom: 1rem;
 }
