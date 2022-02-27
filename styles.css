@@ -53,6 +53,7 @@ body{
     display: flex;
     align-items: center;
 }
+
 .section__img{
     max-width: 6.25rem /*100px*/;
     margin: 0 1.5rem;
@@ -78,7 +79,9 @@ body{
 
 .project-number{
     text-decoration: underline;
+    text-decoration-style: wavy;
 }
+
 .project__cover{
     overflow: hidden;
 }
@@ -87,6 +90,10 @@ body{
     max-width: 31.25rem;
 
     transition: transform .5s ease;
+}
+
+.project__img-cap{
+    text-align: center;
 }
 
 .project__cover:hover .project__img{
@@ -165,4 +172,8 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .resume__list-item{
     margin-bottom: 1rem;
+}
+
+.casestudy__img{
+    max-width: 30rem;
 }
