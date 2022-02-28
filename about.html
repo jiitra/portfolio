@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html color-mode="light" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,11 @@
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
     <header class="header">
         <div class="wrapper header__wrapper">
-            <a class="header__logo" href="index.html">jillian tracy</a>
+            <a class="header__link" href="index.html">jillian tracy</a>
             <!-- mobile nav -->
             <nav class="mobile-nav">
 
@@ -20,22 +22,52 @@
             <nav class="desktop-nav">
                 <ul class="header__list">
                     <li class="header__list-item">
-                        <a class="header__list-link" href="other.html">Other Work</a>
+                        <a class="header__link header__list-link" href="other.html">Other Work</a>
                         <!-- graphic design and artwork -->
                     </li>
                     <li class="header__list-item">
-                        <a class="header__list-link" href="about.html">About</a>
+                        <a class="active header__list-link" href="about.html">About</a>
                     </li>
                     <li class="header__list-item">
-                        <a class="header__list-link" href="resume.html">Resume</a>
+                        <a class="header__link header__list-link" href="resume.html">Resume</a>
                     </li>
                     <li class="header__list-item">
-                        <a class="header__list-link" href="#footer">Contact</a>
+                        <a class="header__link header__list-link" href="#footer">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <main class="wrapper">
+        <div class="resume__container">
+            <!-- rename this to something that can be applied to other areas -->
+            <h1>about me</h1>
+
+            <div class="resume__section">
+            <div class="resume__section-container">
+                <div class="resume__section-col">
+                    <h3>likes &#128077</h3>
+                    <ul>
+                        <li>brutalist web design</li>
+                        <li>black coffee</li>
+                        <li>shades of green</li>
+                    </ul>
+                </div>
+
+                <div class="resume__section-col-2">
+                    <h3>dislikes &#128078</h3>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+    </main>
 
     <footer class="footer" id="footer">
         <div class="wrapper">
@@ -53,6 +85,8 @@
             <p>&copy;2022 Jillian Tracy</p>
         </div>
     </footer>
-    
+
+    <script src="main.js"></script>
 </body>
+
 </html>

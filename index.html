@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html color-mode="light" lang="en">
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 TO DO:
@@ -22,7 +22,7 @@ TO DO:
 
     <header class="header">
         <div class="wrapper header__wrapper">
-            <a class="header__logo" href="index.html">jillian tracy</a>
+            <a class="header__link" href="index.html">jillian tracy</a>
             <!-- mobile nav -->
             <nav class="mobile-nav">
 
@@ -31,17 +31,17 @@ TO DO:
             <nav class="desktop-nav">
                 <ul class="header__list">
                     <li class="header__list-item">
-                        <a class="header__list-link" href="other.html">other work</a>
+                        <a class="header__link header__list-link" href="other.html">other work</a>
                         <!-- graphic design and artwork -->
                     </li>
                     <li class="header__list-item">
-                        <a class="header__list-link" href="about.html">about</a>
+                        <a class="header__link header__list-link" href="about.html">about</a>
                     </li>
                     <li class="header__list-item">
-                        <a class="header__list-link" href="resume.html">resume</a>
+                        <a class="header__link header__list-link" href="resume.html">resume</a>
                     </li>
                     <li class="header__list-item">
-                        <a class="header__list-link" href="#footer">contact</a>
+                        <a class="header__link header__list-link" href="#footer">contact</a>
                         <!-- IDEA: "contact" header briefly changes color on click to grab attention, then fades back to black -->
                     </li>
                 </ul>
@@ -52,6 +52,8 @@ TO DO:
     <main class="wrapper">
         <!-- note to self: double check class names as i code (BEM)
         do my class names reflect appropriate structure and info? -->
+
+        <button class ="color-mode__btn js-color-mode__btn">Toggle Light Mode</button>
 
         <div class="section">
             <div class="section__container">
@@ -149,6 +151,8 @@ TO DO:
             <p>&copy;2022 Jillian Tracy</p>
         </div>
     </footer>
+
+    <script src ="main.js"></script>
 </body>
 
 </html>

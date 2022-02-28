@@ -1,7 +1,20 @@
-:root{
-    /* custom properties in here */
+
+/*I referenced https://ryanfeigenbaum.com/dark-mode/ */
+
+:root[color-mode="light"]{
     --background-color: #f5f5f5;
+    --text-color: #121212;
+    --link-color: #3a8dff;
+    --link-color-active: red;
 }
+
+:root[color-mode="dark"]{
+    --background-color: #181818;
+    --text-color: #bababa;
+    --link-color: #365d92;
+    --link-color-active: #883b3b;
+}
+
 *{
     border: none;
     box-sizing: border-box;
@@ -14,6 +27,16 @@
 
 body{
     background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* dim images in dark mode */
+[color-mode="dark"] img{
+    filter:brightness(70%);
+}
+
+main{
+    min-height: 90vh; /* avoids floating footer */
 }
 
 .header__wrapper{
@@ -34,6 +57,14 @@ body{
 
 .header__list-item {
     list-style-type: none;
+}
+
+.header__link{
+    color: var(--link-color);
+}
+
+.active{
+    color: var(--link-color-active);
 }
 
 .header__list-link {
@@ -134,11 +165,16 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .footer__list-item{
     list-style-type: none;
+    margin: 0.5rem 0;
+}
+
+.footer__list-link{
+    color: var(--link-color);
 }
 
 /*RESUME*/
 
-.resume{
+.resume__container{
     margin: 0 auto;
     max-width: 40rem;
 }
