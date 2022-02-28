@@ -32,7 +32,7 @@ body{
 
 /* dim images in dark mode */
 [color-mode="dark"] img{
-    filter:brightness(70%);
+    filter:brightness(80%);
 }
 
 main{
@@ -157,6 +157,7 @@ so when this wrapper is applied, content has nice uniform container and is respo
 .wrapper{
     margin: 0 auto;
     max-width: 75rem /*1200px*/;
+    padding: 0 2rem;
 }
 
 .footer{
