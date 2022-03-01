@@ -12,11 +12,11 @@ buttonElement.addEventListener('click', function () {
         // Sets the user's preference in local storage
         localStorage.setItem("color-mode", "dark");
     }
-    else{
+    else {
         document.documentElement.setAttribute("color-mode", "light");
         localStorage.setItem("color-mode", "light");
     }
-    });
+});
 
 if (
     /* This condition checks whether the user has set a site preference for dark mode OR a OS-level preference for Dark Mode AND no site preference */
@@ -26,6 +26,6 @@ if (
 ) {
     // if true, set the site to Dark Mode
     document.documentElement.setAttribute('color-mode', 'dark');
-} else{
+} else {
     document.documentElement.setAttribute('color-mode', 'light');
 }

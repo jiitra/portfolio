@@ -24,6 +24,9 @@
     font-family: sans-serif;
     text-transform: lowercase; /*this might look lazy but... why do i like it??*/
 }
+html{
+    scroll-behavior: smooth; /*smooth scroll to contact!!!*/
+}
 
 body{
     background-color: var(--background-color);
@@ -106,6 +109,10 @@ main{
     .desktop-nav{
         display: none;
     }
+}
+
+@media(prefers-color-scheme: dark){
+    /*color-mode ="dark";*/
 }
 
 .project-number{
