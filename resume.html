@@ -6,6 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume — Jillian Tracy</title>
+    <!-- load in first so page loads accurately -->
+    <script>
+        if (
+          localStorage.getItem("color-mode") === "dark" ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+            !localStorage.getItem("color-mode"))
+        ) {
+          document.documentElement.setAttribute("color-mode", "dark");
+        }
+      </script>
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />

@@ -6,6 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast But Outside — Jillian Tracy</title>
+    <!-- load in first so page loads accurately -->
+    <script>
+        if (
+            localStorage.getItem("color-mode") === "dark" ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+                !localStorage.getItem("color-mode"))
+        ) {
+            document.documentElement.setAttribute("color-mode", "dark");
+        }
+    </script>
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
@@ -41,14 +51,28 @@
 
     <main class="wrapper">
         <div class="work">
-            <h1 class="project__title resume__header">Podcast But Outside</h1>
-            <h3 class="project__caption">Interface Redesign</h3>
-            <h2 class="resume__section-title">Intro</h2>
-            <p class>Podcast But Outside (PBO) is a comedy podcast hosted by Cole Hersch and Andrew Michaan, combining a
+
+            <div class="project__title-wrapper">
+                <h1 class="project__title project__title-case">Podcast But Outside</h1>
+
+                <div class="project__caption-col">
+                    <div class="pill">
+                        <p class="project__caption">2021 | ui design</p>
+                    </div>
+                    <div class="pill">
+                        <h3 class="project__caption">Interface Redesign</h3>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="casestudy__header">Intro</h2>
+            <p class="casestudy__text">Podcast But Outside (PBO) is a comedy podcast hosted by Cole Hersch and Andrew
+                Michaan, combining a
                 man-on-the-street interview style with deadpan humor. Both hosts have backgrounds in comedy writing,
-                standup, and social media fame. My website redesign embraces the offbeat quirkiness of the podcast’s
-                brand,
-                welcoming the audience with hand-drawn elements and playful themes.</p>
+                standup, and social media fame. </p>
+
+            <p class="casestudy__text"> My website redesign embraces the offbeat quirkiness of the podcast’s
+                brand, welcoming the audience with hand-drawn elements and playful themes.</p>
 
             <!-- <iframe style="border: 0 solid rgba(0, 0, 0, 0.1);" width="900" height="450"
                 src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FJghTDGuzGX8qXFVdeiB5W7%2FPBO-Redesign%3Fnode-id%3D50%253A136%26scaling%3Dscale-down%26page-id%3D11%253A2%26starting-point-node-id%3D50%253A136"
@@ -60,57 +84,71 @@
                 allowfullscreen="" style="position:relative; top:0; left:0; width:100%; height:100%;"
                 class="embed-content"></iframe>
 
-            <h2>Original Website</h2>
+            <h2 class="casestudy__header">Original Website</h2>
             <img class="casestudy__img" src="img/pbo-original-1.png">
             <img class="casestudy__img" src="img/pbo-original-2.png">
             <img class="casestudy__img" src="img/pbo-original-3.png">
             <img class="casestudy__img" src="img/pbo-original-4.png">
 
-            <h2 class="resume__section-title">Background</h2>
-            <p>One benefit of the existing site is its simplicity. Text is kept to a minimum, and there’s no visual mess
+            <h2 class="casestudy__header">Background</h2>
+            <p class="casestudy__text">One benefit of the existing site is its simplicity. Text is kept to a minimum,
+                and there’s no visual mess
                 competing for attention on the screen. In my redesign, I wanted to keep this simplicity but add more
                 on-brand humor to the site’s interface. My challenge was maintaining a balance of efficiency and
                 delightful design. Too much focus on efficiency would detract from the design, and too much focus on
                 design would distract the user from navigating the site.</p>
 
-            <p>I created a user profile to represent the Podcast But Outside’s target demographic. The profile is based
-                on an overview of fans who interact with the podcast on social media and on the episodes.
-                <br>
+            <p class="casestudy__text">I created a user profile to represent the Podcast But Outside’s target
+                demographic. The profile is based
+                on an overview of fans who interact with the podcast on social media and on the episodes. </p>
+            <p class="casestudy__text">
                 Social media marketing is important to this demographic, so I wanted to make sure the social icons were
                 more accessible in my redesign. Most fans are either millennials or part of Gen Z, so these digital
                 natives expect websites to be engaging and upfront with content.
             </p>
 
-            <h2 class="resume__section-title">Wireframes & Ideation</h2>
-            <p>When creating my wireframes, I focused on creating a strong visual hierarchy with headers and a varied
+            <h2 class="casestudy__header">Wireframes & Ideation</h2>
+            <p class="casestudy__text"> When creating my wireframes, I focused on creating a strong visual hierarchy
+                with headers and a varied
                 scaling of elements. I created three variations for each page: home, live shows, and episodes.</p>
-            <h3 class="resume__section-title">01. HOME</h3>
-            <p>For the home page, I wanted to visually represent the “outside” element of the podcast with the hosts
+            <h3 class="project__caption">01. HOME</h3>
+            <p class="casestudy__text">For the home page, I wanted to visually represent the “outside” element of the
+                podcast with the hosts
                 standing in front of an outdoor background. Originally, I wanted to have a slideshow of multiple outside
                 images loop behind the hosts. However, I chose to keep the static clouds background because it was less
                 distracting. I also included cloud graphics in the navigation bar to create cohesion with the motifs.
             </p>
-            <h3 class="resume__section-title">02. LIVE SHOWS</h3>
-            <p>The live shows page lists upcoming tour dates and links fans to a ticket purchasing site. Instead of a
+            <h3 class="project__caption">02. LIVE SHOWS</h3>
+            <p class="casestudy__text">The live shows page lists upcoming tour dates and links fans to a ticket
+                purchasing site. Instead of a
                 traditional list view, I wanted to use graphic representations of tickets with the information listed on
                 each ticket. I also thought of organizing tour dates by region, since buyers are looking for venues
                 closest to them.</p>
-            <h3 class="resume__section-title">03. EPISODES</h3>
-            <p>For the episodes page, I experimented with ways of breaking the barriers of the grid layout. I
+            <h3 class="project__caption">03. EPISODES</h3>
+            <p class="casestudy__text">For the episodes page, I experimented with ways of breaking the barriers of the
+                grid layout. I
                 brainstormed ways to organize the large video collection without overwhelming the user with endless
                 scrolling.</p>
-            <h2 class="resume__section-title">Final Result</h2>
-            <p>In my redesign of the Podcast But Outside website, I aimed to strengthen the brand voice with engaging
-                graphics and playful design choices. One way I was able to accomplish this was skewing images throughout
+            <h2 class="casestudy__header">Final Result</h2>
+            <p class="casestudy__text">In my redesign of the Podcast But Outside website, I aimed to strengthen the
+                brand voice with engaging graphics and playful design choices. </p>
+
+            <p class="casestudy__text">One way I was able to accomplish this was skewing images throughout
                 the pages of the website. This created dynamic angles and a sense of movement in the design. Especially
                 in the video gallery, skewing the shapes created more interest in the grid system that would otherwise
-                appear stagnant. I also revised the navigation bar by reducing the number of pages on the website and
-                organizing them according to user feedback. The navigation bar also has a separate background color,
-                ensuring visual separation from other elements on the page. To increase engagement, I included cloud
-                doodles that appear on hover and on active pages. There are also hand-drawn graphics throughout the site
-                that create cohesion and reference PBO’s comedic reputation. By improving the color palette, introducing
-                a stronger visual hierarchy, and revising the navigation bar, the site can withhold a young, exciting
-                brand and encourage the audience to engage with the podcast.</p>
+                appear stagnant.</p>
+
+            <p class = "casestudy__text">I also revised the navigation bar by reducing the number of pages on the website and
+            organizing them according to user feedback. The navigation bar also has a separate background color,
+            ensuring visual separation from other elements on the page.</p>
+            
+            <p class = "casestudy__text">To increase engagement, I included cloud
+            doodles that appear on hover and on active pages. There are also hand-drawn graphics throughout the site
+            that create cohesion and reference PBO’s comedic reputation. </p>
+            
+            <p class = "casestudy__text">By improving the color palette, introducing
+            a stronger visual hierarchy, and revising the navigation bar, the site can withhold a young, exciting
+            brand and encourage the audience to engage with the podcast.</p>
         </div>
     </main>
 

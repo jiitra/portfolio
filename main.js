@@ -2,9 +2,6 @@ const buttonElement = document.querySelector(".js-color-mode__btn");
 
 const contactLink = document.querySelector(".contact-link");
 
-
-//it doesnt work on other pages because the page loads with color-mode = "light" as default
-//how can i set appropriate color mode on page load?
 buttonElement.addEventListener('click', function () {
 
     //if (colorMode == "light") {

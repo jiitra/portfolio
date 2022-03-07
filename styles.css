@@ -6,17 +6,22 @@
 :root[color-mode="light"]{
     --background-color: #f5f5f5;
     --accent-color: #05b27b;
+    --accent-color-secondary: #3188ff;
     --text-color: #121212;
     --link-color: #3a8dff;
     --link-color-active: red;
+    --mid-dark-color: #414243;
+    --pill-bg-color: #c1c1c13b;
 }
 
 :root[color-mode="dark"]{
     --background-color: #181818;
     --accent-color: #05b27b;
+    --accent-color-secondary: #3188ff;
     --text-color: #bababa;
-    --link-color: #365d92;
-    --link-color-active: #883b3b;
+    --link-color: #4694ff;
+    --link-color-active: #e64343;
+    --pill-bg-color: #c1c1c13b;
 }
 
 *{
@@ -44,6 +49,15 @@ body{
 
 main{
     min-height: 90vh; /* avoids floating footer */
+}
+
+.color-mode__btn{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 5rem;
+
+    height: 4rem;
 }
 
 .header__wrapper{
@@ -107,6 +121,26 @@ main{
     padding-bottom: 6.25rem;
 }
 
+.section__title{
+    /*this isnt working */
+     -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    transition: background-clip 0.2s ease-in-out;
+}
+
+.section__title:hover{
+    background-image: linear-gradient(150deg, var(--accent-color), var(--accent-color-secondary));
+    background-clip: text;
+    /* text clipping */
+    /*look at - https://www.youtube.com/watch?v=f3mwKLXpOLk */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    /* transform: scale(1.1); */
+    cursor:default;
+}
+
 /* At < 700px screen size, hide desktop nav & display mobile */
 @media screen and (max-width: 700px ){
     .mobile-nav{
@@ -139,6 +173,8 @@ main{
 
 .project__img-cap{
     text-align: center;
+    font-weight: 300;
+    padding-top: 1.3rem;
 }
 
 .project__cover:hover .project__img{
@@ -148,6 +184,16 @@ main{
 .work{
     margin: 0 auto;
     max-width: 50rem;
+}
+
+.casestudy__header{
+    font-weight: 500;
+}
+.casestudy__text{
+    line-height: 1.75rem;
+    text-transform: none;
+    margin: 1.75rem 0;
+    font-weight: 300;
 }
 
 .project__container{
@@ -165,9 +211,51 @@ main{
 }
 
 .project__title{
-    color: var(--accent-color);
+    /* animate gradient if i have time */
+    background-image: linear-gradient(150deg, var(--accent-color), var(--accent-color-secondary));
+    background-clip: text;
+    /* text clipping */
+    /*look at - https://www.youtube.com/watch?v=f3mwKLXpOLk */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.project__title-home{
     margin: 1rem 0;
     font-size: 2.25rem;
+}
+
+.project__title-case{
+    font-size: 4rem;
+    margin: 1.2rem 0;
+}
+
+.project__caption{
+    font-weight: 100;
+    color: var(--mid-dark-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.09rem;
+}
+
+/* how to make pill shrink to text? */
+.pill{
+    background-color: var(--pill-bg-color);
+    padding: 0.8rem;
+    border-radius: 5rem;
+}
+
+.project__caption-col{
+    margin-top: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project__title-wrapper{
+    margin: 4rem 0 6rem 0;
 }
 
 /* sets max width for any content in wrapper
