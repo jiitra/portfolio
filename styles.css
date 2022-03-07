@@ -1,8 +1,11 @@
 
 /*I referenced https://ryanfeigenbaum.com/dark-mode/ */
 
+/* can i smooth dark mode / light mode transition? */
+
 :root[color-mode="light"]{
     --background-color: #f5f5f5;
+    --accent-color: #05b27b;
     --text-color: #121212;
     --link-color: #3a8dff;
     --link-color-active: red;
@@ -10,6 +13,7 @@
 
 :root[color-mode="dark"]{
     --background-color: #181818;
+    --accent-color: #05b27b;
     --text-color: #bababa;
     --link-color: #365d92;
     --link-color-active: #883b3b;
@@ -62,10 +66,12 @@ main{
     list-style-type: none;
 }
 
+/*inactive link*/
 .header__link{
     color: var(--link-color);
 }
 
+/*active link*/
 .active{
     color: var(--link-color-active);
 }
@@ -159,7 +165,9 @@ main{
 }
 
 .project__title{
-    margin: 0.5rem 0;
+    color: var(--accent-color);
+    margin: 1rem 0;
+    font-size: 2.25rem;
 }
 
 /* sets max width for any content in wrapper
