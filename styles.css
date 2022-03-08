@@ -1,15 +1,14 @@
 
 /*I referenced https://ryanfeigenbaum.com/dark-mode/ */
 
-/* can i smooth dark mode / light mode transition? */
-
 :root[color-mode="light"]{
     --background-color: #f5f5f5;
     --accent-color: #05b27b;
     --accent-color-secondary: #3188ff;
+    --accent-color-secondary-light: #29cbff73;
     --text-color: #121212;
-    --link-color: #3a8dff;
-    --link-color-active: red;
+    /* --link-color: #3a8dff; */
+    /* --link-color-active: red; */
     --mid-dark-color: #414243;
     --pill-bg-color: #c1c1c13b;
 }
@@ -18,9 +17,10 @@
     --background-color: #181818;
     --accent-color: #05b27b;
     --accent-color-secondary: #3188ff;
+    --accent-color-secondary-light: #009ed199;
     --text-color: #bababa;
-    --link-color: #4694ff;
-    --link-color-active: #e64343;
+    /* --link-color: #4694ff; */
+    /* --link-color-active: #e64343; */
     --pill-bg-color: #c1c1c13b;
 }
 
@@ -31,7 +31,7 @@
     padding: 0;
 
     font-family: sans-serif;
-    text-transform: lowercase; /*this might look lazy but... why do i like it??*/
+    text-transform: lowercase;
 }
 html{
     scroll-behavior: smooth; /*smooth scroll to contact!!!*/
@@ -40,6 +40,8 @@ html{
 body{
     background-color: var(--background-color);
     color: var(--text-color);
+
+    transition: background-color 0.7s ease;
 }
 
 /* dim images in dark mode */
@@ -52,12 +54,17 @@ main{
 }
 
 .color-mode__btn{
+    z-index: 10;
+
     position: fixed;
     bottom: 0px;
     right: 0px;
     margin: 5rem;
 
-    height: 4rem;
+    /* height: 4rem; */
+
+    padding: 2rem;
+    border-radius: 5rem;
 }
 
 .header__wrapper{
@@ -80,9 +87,39 @@ main{
     list-style-type: none;
 }
 
-/*inactive link*/
 .header__link{
-    color: var(--link-color);
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+}
+
+/*https://codepen.io/argyleink/pen/poEjvpd*/
+.header__link::before{
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.header__link:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header__link::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: var(--accent-color-secondary-light);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+.header__home-link{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
 }
 
 /*active link*/
@@ -93,22 +130,24 @@ main{
 .header__list-link {
     /* color: #303030; */
     /* text-decoration: none; */
-    padding: 0.6rem 1.8rem /*10px 30px*/; 
+    /* padding: 0.6rem 1.8rem /*10px 30px*/
+    /* padding: 0.5rem 1rem; */
+    margin: 0.6rem 1.8rem;
 }
 
-.section{
+.home__intro{
     align-items: center;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
 }
 
-.section__container{
+.home__intro-container{
     display: flex;
     align-items: center;
 }
 
-.section__img{
+.home__intro-img{
     max-width: 6.25rem /*100px*/;
     margin: 0 1.5rem;
 
@@ -116,30 +155,42 @@ main{
     filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.4));
 }
 
-.section__text{
+.jill__header{
+    transition: content 1s ease-in-out;
+}
+
+.jill__header::after{
+    content: "jill tracy";
+}
+
+.jill__header:hover::after{
+    content: "jillian tracy";
+}
+
+.home__intro-cap{
     margin: 1.5rem;
     padding-bottom: 6.25rem;
 }
 
-.section__title{
-    /*this isnt working */
-     -webkit-transition: background-image 0.2s ease-in-out;
+/* .section__title{
+    /*this isnt working 
+    -webkit-transition: background-image 0.2s ease-in-out;
     transition: background-image 0.2s ease-in-out;
     transition: background-clip 0.2s ease-in-out;
-}
+} */
 
-.section__title:hover{
+/* .section__title:hover{
     background-image: linear-gradient(150deg, var(--accent-color), var(--accent-color-secondary));
     background-clip: text;
     /* text clipping */
-    /*look at - https://www.youtube.com/watch?v=f3mwKLXpOLk */
+    /*look at - https://www.youtube.com/watch?v=f3mwKLXpOLk 
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
-    /* transform: scale(1.1); */
+    /* transform: scale(1.1); 
     cursor:default;
-}
+} */
 
 /* At < 700px screen size, hide desktop nav & display mobile */
 @media screen and (max-width: 700px ){
@@ -184,6 +235,7 @@ main{
 .work{
     margin: 0 auto;
     max-width: 50rem;
+    margin-bottom: 6rem;
 }
 
 .casestudy__header{
@@ -238,6 +290,7 @@ main{
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.09rem;
+    line-height: 1.5rem;
 }
 
 /* how to make pill shrink to text? */
@@ -245,13 +298,12 @@ main{
     background-color: var(--pill-bg-color);
     padding: 0.8rem;
     border-radius: 5rem;
+    display: inline-block;
+    margin-right: 1rem;
 }
 
 .project__caption-col{
     margin-top: 1rem;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .project__title-wrapper{
@@ -270,6 +322,10 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .footer{
     margin: 2rem 0;
+}
+
+.footer__header{
+    transition: color ease-in-out 0.5s;
 }
 
 .footer__list-item{

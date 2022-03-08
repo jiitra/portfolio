@@ -17,9 +17,21 @@ buttonElement.addEventListener('click', function () {
     }
 });
 
+function resetContact() {
+    document.getElementsByClassName("footer__header")[0].style.color = getComputedStyle(document.documentElement)
+        .getPropertyValue('--text-color');
+}
+
 //change color of contact header at bottom when link is clicked..
 contactLink.addEventListener('click', function () {
-    document.getElementsByClassName("footer__header").style.color = "blue"; //this isnt working but i didnt expect it to
+    setTimeout(() => {
+        document.getElementsByClassName("footer__header")[0].style.color = getComputedStyle(document.documentElement)
+            .getPropertyValue('--accent-color-secondary');
+    }, 500);
+
+    setTimeout(() => {
+        resetContact();
+    }, 1500);
 })
 
 if (
