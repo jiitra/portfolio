@@ -11,6 +11,7 @@
     /* --link-color-active: red; */
     --mid-dark-color: #414243;
     --pill-bg-color: #c1c1c13b;
+    --button-bg-color: var(--accent-color-secondary);
 }
 
 :root[color-mode="dark"]{
@@ -18,10 +19,11 @@
     --accent-color: #05b27b;
     --accent-color-secondary: #3188ff;
     --accent-color-secondary-light: #009ed199;
-    --text-color: #bababa;
+    --text-color: #f8f8f8;
     /* --link-color: #4694ff; */
     /* --link-color-active: #e64343; */
     --pill-bg-color: #c1c1c13b;
+    --button-bg-color: var(--text-color);
 }
 
 *{
@@ -46,7 +48,7 @@ body{
 
 /* dim images in dark mode */
 [color-mode="dark"] img{
-    filter:brightness(80%);
+    filter:brightness(90%);
 }
 
 main{
@@ -55,16 +57,18 @@ main{
 
 .color-mode__btn{
     z-index: 10;
-
+    background-color: var(--button-bg-color);
+    color: var(--background-color);
     position: fixed;
-    bottom: 0px;
-    right: 0px;
-    margin: 5rem;
+    /* bottom: 0px; */
+    bottom: 4vh;
+    right: 2vw;
+    /* margin: 5rem; */
 
     /* height: 4rem; */
 
-    padding: 2rem;
-    border-radius: 5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10rem;
 }
 
 .header__wrapper{
@@ -191,20 +195,6 @@ main{
     /* transform: scale(1.1); 
     cursor:default;
 } */
-
-/* At < 700px screen size, hide desktop nav & display mobile */
-@media screen and (max-width: 700px ){
-    .mobile-nav{
-        display: block;
-    }
-    .desktop-nav{
-        display: none;
-    }
-}
-
-@media(prefers-color-scheme: dark){
-    /*color-mode ="dark";*/
-}
 
 .project-number{
     text-decoration: underline;
@@ -377,4 +367,38 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .casestudy__img{
     max-width: 30rem;
+}
+
+/* At < 700px screen size, hide desktop nav & display mobile */
+@media screen and (max-width: 700px ){
+    .mobile-nav{
+        display: block;
+    }
+    .desktop-nav{
+        display: none;
+    }
+
+    .project__container{
+        grid-template-columns: 1fr;
+    }
+
+    .home__intro-cap{
+        padding-bottom: 1.25rem;
+    }
+
+    .work__header{
+        margin: 0;
+    }
+
+    .home__intro-container{
+        margin-top: 1rem;
+    }
+
+    .project__title-case{
+        font-size: 3rem;
+    }
+}
+
+@media(prefers-color-scheme: dark){
+    /*color-mode ="dark";*/
 }
