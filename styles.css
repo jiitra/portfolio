@@ -1,5 +1,12 @@
 
 /*I referenced https://ryanfeigenbaum.com/dark-mode/ */
+/*
+TO DO:
+- why is contact lightup not working on int pages
+- format images on pbo overview
+- add content to other pages
+- make pills responsive 
+*/
 
 :root[color-mode="light"]{
     --background-color: #f5f5f5;
@@ -75,6 +82,8 @@ main{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    max-width: 75rem;
+    margin: auto;
 }
 
 .header {
@@ -366,11 +375,12 @@ so when this wrapper is applied, content has nice uniform container and is respo
 }
 
 .casestudy__img{
-    max-width: 30rem;
+    width: 100%;
+    display: inline-block;
 }
 
 /* At < 700px screen size, hide desktop nav & display mobile */
-@media screen and (max-width: 700px ){
+@media screen and (max-width: 768px ){
     .mobile-nav{
         display: block;
     }
@@ -396,6 +406,10 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
     .project__title-case{
         font-size: 3rem;
+    }
+
+    .project__text{
+        justify-self: flex-start;
     }
 }
 
