@@ -1,21 +1,25 @@
-const buttonElement = document.querySelector(".js-color-mode__btn");
-
 const contactLink = document.querySelector(".contact-link");
 
-buttonElement.addEventListener('click', function () {
+const fileName = location.href.split("/").slice(-1); 
 
-    //if (colorMode == "light") {
-    if (document.documentElement.getAttribute("color-mode") == "light") {
-        document.documentElement.setAttribute("color-mode", "dark");
+// light/dark mode button is only on homepage, if statement checks for it
+if(fileName=="index.html"){
+    const colorButton = document.querySelector(".js-color-mode__btn");
+    colorButton.addEventListener('click', function () {
 
-        // Sets the user's preference in local storage
-        localStorage.setItem("color-mode", "dark");
-    }
-    else {
-        document.documentElement.setAttribute("color-mode", "light");
-        localStorage.setItem("color-mode", "light");
-    }
-});
+        //if (colorMode == "light") {
+        if (document.documentElement.getAttribute("color-mode") == "light") {
+            document.documentElement.setAttribute("color-mode", "dark");
+    
+            // Sets the user's preference in local storage
+            localStorage.setItem("color-mode", "dark");
+        }
+        else {
+            document.documentElement.setAttribute("color-mode", "light");
+            localStorage.setItem("color-mode", "light");
+        }
+    });
+}
 
 function resetContact() {
     document.getElementsByClassName("footer__header")[0].style.color = getComputedStyle(document.documentElement)
