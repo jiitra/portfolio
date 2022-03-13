@@ -5,6 +5,7 @@ TO DO:
 - format images on pbo overview
 - add content to other pages
 - make pills responsive 
+- responsive images
 */
 
 :root[color-mode="light"]{
@@ -168,16 +169,18 @@ main{
 }
 
 .jill__header{
-    transition: content 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .jill__header::after{
     content: "jill tracy";
 }
 
-.jill__header:hover::after{
+/* deciding if i like this or not */
+
+/* .jill__header:hover::after{
     content: "jillian tracy";
-}
+} */
 
 .home__intro-cap{
     margin: 1.5rem;
@@ -207,6 +210,7 @@ main{
 .project-number{
     text-decoration: underline;
     text-decoration-style: wavy;
+    text-decoration-color: var(--text-color);
 }
 
 .project__cover{
@@ -239,6 +243,7 @@ main{
 .casestudy__header{
     font-weight: 500;
 }
+
 .casestudy__text{
     line-height: 1.75rem;
     text-transform: none;
@@ -324,6 +329,7 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .footer__header{
     transition: color ease-in-out 0.5s;
+    font-size: 2rem;
 }
 
 .footer__list-item{
@@ -409,6 +415,16 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
     .project__text{
         justify-self: flex-start;
+    }
+}
+
+@media screen and (max-width: 550px ){
+    .pill{
+        margin-top: 0.5rem;
+    }
+
+    .project__title-wrapper {
+        margin: 3rem 0;
     }
 }
 

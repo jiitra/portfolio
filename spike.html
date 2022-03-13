@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html color-mode="light" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +9,18 @@
     <!-- load in first so page loads accurately -->
     <script>
         if (
-          localStorage.getItem("color-mode") === "dark" ||
-          (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-            !localStorage.getItem("color-mode"))
+            localStorage.getItem("color-mode") === "dark" ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+                !localStorage.getItem("color-mode"))
         ) {
-          document.documentElement.setAttribute("color-mode", "dark");
+            document.documentElement.setAttribute("color-mode", "dark");
         }
-      </script>
+    </script>
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
 </head>
+
 <body>
     <header class="header">
         <div class="header__wrapper">
@@ -47,12 +49,45 @@
         </div>
     </header>
 
-    <main class = "wrapper">
-        <div class ="work">
-            <h1 class="project__title resume__header">Spike's Underwater Adventure</h1>
+    <main class="wrapper">
+        <div class="work">
+            <div class="project__title-wrapper">
+                <h1 class="project__title project__title-case">Spike's Underwater Adventure</h1>
+
+                <div class="project__caption-col">
+                    <div class="pill">
+                        <p class="project__caption">2019 | app development</p>
+                    </div>
+                    <div class="pill">
+                        <h3 class="project__caption">graphic design lead</h3>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="casestudy__header">overview</h2>
+            <p class="casestudy__text">Spike’s Underwater Adventure is a mobile game for children ages 4-7. The levels
+                include activities like coloring, tapping, and sorting items. The app aims to improve children’s motor
+                skills in engaging ways.</p>
+            <p class="casestudy__text">As the graphic design lead, I designed Spike the Pufferfish and other graphics
+                for the game. I created the intro animation using Adobe After Effects with graphics created in Adobe
+                Illustrator. On the development side, I coded buttons on pages and linked pages together. The team and I
+                programmed using Java, PHP and MySQL.
+            </p>
+            <p class="casestudy__text">My favorite part of the project was testing the app with students from a local
+                elementary school. Students in kindergarten, first grade, and second grade tested the app, with the best
+                results coming from students in kindergarten and first grade. During testing, my team was able to assess
+                how challenging the levels were for students to complete and how connected they felt to the gameplay.
+            </p>
+            <p class="casestudy__text">After testing, we determined that the app is best suited for students in
+                kindergarten and first grade. The games were the right balance of challenging and educational for
+                students in this range, and we noticed that the activities were less challenging for the second graders.
+            </p>
+            <!-- <p class="casestudy__text">If I had the chance to continue developing the app,  </p> -->
+
+            <h2 class="casestudy__header">taskflow</h2>
         </div>
     </main>
-    
+
     <footer class="footer" id="footer">
         <div class="wrapper">
             <nav>
@@ -70,6 +105,7 @@
         </div>
     </footer>
 
-    <script src ="main.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
