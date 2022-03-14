@@ -2,10 +2,27 @@
 /*I referenced https://ryanfeigenbaum.com/dark-mode/ */
 /*
 TO DO:
-- format images on pbo overview
-- add content to other pages
-- make pills responsive 
+all
 - responsive images
+- hamburger menu mobile nav
+
+pbo
+- add wireframe images
+- add images to final result section
+
+web traffic 
+- write web traffic ask
+- write web traffic takeaways
+- embed PDF
+- embed Figma link
+
+spike
+- diagram task flow
+- write about task flow
+
+about
+- write
+- memoji image
 */
 
 :root[color-mode="light"]{
@@ -42,6 +59,7 @@ TO DO:
     font-family: sans-serif;
     text-transform: lowercase;
 }
+
 html{
     scroll-behavior: smooth; /*smooth scroll to contact!!!*/
 }
@@ -62,22 +80,9 @@ main{
     min-height: 90vh; /* avoids floating footer */
 }
 
-.color-mode__btn{
-    z-index: 10;
-    background-color: var(--button-bg-color);
-    color: var(--background-color);
-    position: fixed;
-    /* bottom: 0px; */
-    bottom: 4vh;
-    right: 2vw;
-    /* margin: 5rem; */
-
-    /* height: 4rem; */
-
-    padding: 0.75rem 1.5rem;
-    border-radius: 10rem;
+.header {
+    padding: 1.5rem /*25px*/;
 }
-
 .header__wrapper{
     align-items: center;
     display: flex;
@@ -86,18 +91,9 @@ main{
     margin: auto;
 }
 
-.header {
-    padding: 1.5rem /*25px*/;
-}
-
 .header__list{
     display: flex;
-
     text-transform: lowercase;
-}
-
-.header__list-item {
-    list-style-type: none;
 }
 
 .header__link{
@@ -105,7 +101,6 @@ main{
     text-decoration: none;
     position: relative;
 }
-
 /*https://codepen.io/argyleink/pen/poEjvpd*/
 .header__link::before{
     transform: scaleX(0);
@@ -135,17 +130,32 @@ main{
     font-size: 1.3rem;
 }
 
-/*active link*/
+.header__list-item {
+    list-style-type: none;
+}
+
 .active{
     color: var(--link-color-active);
 }
 
 .header__list-link {
-    /* color: #303030; */
-    /* text-decoration: none; */
-    /* padding: 0.6rem 1.8rem /*10px 30px*/
-    /* padding: 0.5rem 1rem; */
     margin: 0.6rem 1.8rem;
+}
+
+.color-mode__btn{
+    z-index: 10;
+    background-color: var(--button-bg-color);
+    color: var(--background-color);
+    position: fixed;
+    /* bottom: 0px; */
+    bottom: 4vh;
+    right: 2vw;
+    /* margin: 5rem; */
+
+    /* height: 4rem; */
+
+    padding: 0.75rem 1.5rem;
+    border-radius: 10rem;
 }
 
 .home__intro{
@@ -169,43 +179,14 @@ main{
 }
 
 .jill__header{
-    transition: all 1s ease-in-out;
+    font-size: 2.7rem;
 }
-
-.jill__header::after{
-    content: "jill tracy";
-}
-
-/* deciding if i like this or not */
-
-/* .jill__header:hover::after{
-    content: "jillian tracy";
-} */
 
 .home__intro-cap{
     margin: 1.5rem;
     padding-bottom: 6.25rem;
+    text-align: center;
 }
-
-/* .section__title{
-    /*this isnt working 
-    -webkit-transition: background-image 0.2s ease-in-out;
-    transition: background-image 0.2s ease-in-out;
-    transition: background-clip 0.2s ease-in-out;
-} */
-
-/* .section__title:hover{
-    background-image: linear-gradient(150deg, var(--accent-color), var(--accent-color-secondary));
-    background-clip: text;
-    /* text clipping */
-    /*look at - https://www.youtube.com/watch?v=f3mwKLXpOLk 
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-    /* transform: scale(1.1); 
-    cursor:default;
-} */
 
 .project-number{
     text-decoration: underline;
@@ -249,6 +230,32 @@ main{
     text-transform: none;
     margin: 1.75rem 0;
     font-weight: 300;
+}
+
+.casestudy__img-container{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+.casestudy__img-flex{
+    width: 49%;
+}
+
+.casestudy__img-single{
+    width: 100%;
+}
+
+.casestudy__img-cap{
+    font-weight: 300;
+    font-style: italic;
+}
+
+.casestudy__iframe{
+    margin: 2rem auto;
 }
 
 .project__container{
@@ -379,12 +386,15 @@ so when this wrapper is applied, content has nice uniform container and is respo
     margin-bottom: 1rem;
 }
 
-.casestudy__img{
-    width: 100%;
-    display: inline-block;
+
+
+@media screen and (max-width: 863px ){
+    .casestudy__img-flex{
+        width: 100%;
+    }
 }
 
-/* At < 700px screen size, hide desktop nav & display mobile */
+/* hide desktop nav & display mobile */
 @media screen and (max-width: 768px ){
     .mobile-nav{
         display: block;
