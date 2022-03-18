@@ -1,9 +1,7 @@
 const contactLink = document.querySelectorAll(".contact-link");
 
-const fileName = location.href.split("/").slice(-1);
-
 // light/dark mode button is only on homepage, if statement checks for it
-if (fileName == "index.html") {
+if (document.querySelector(".js-color-mode__btn") != null) {
     const colorButton = document.querySelector(".js-color-mode__btn");
     colorButton.addEventListener('click', function () {
 
