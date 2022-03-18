@@ -1,29 +1,8 @@
-
-/*I referenced https://ryanfeigenbaum.com/dark-mode/ */
 /*
 TO DO:
 all
 - responsive images
-- footer links
-
-pbo
-- add wireframe images
-- add images to final result section
-
-web traffic 
-- write web traffic ask
-- write web traffic takeaways
-- embed PDF
-- embed Figma link
-
-spike
-- diagram task flow
-- write about task flow
-
-about
-- write
-- memoji image
-- responsive img
+-tidy code
 */
 
 :root[color-mode="light"]{
@@ -32,21 +11,18 @@ about
     --accent-color-secondary: #3188ff;
     --accent-color-secondary-light: #29cbff73;
     --text-color: #121212;
-    /* --link-color: #3a8dff; */
-    /* --link-color-active: red; */
     --mid-dark-color: #414243;
     --pill-bg-color: #c1c1c13b;
     --button-bg-color: var(--accent-color-secondary);
 }
 
+/*I referenced https://ryanfeigenbaum.com/dark-mode/ */
 :root[color-mode="dark"]{
     --background-color: #181818;
     --accent-color: #05b27b;
     --accent-color-secondary: #3188ff;
     --accent-color-secondary-light: #009ed199;
     --text-color: #f8f8f8;
-    /* --link-color: #4694ff; */
-    /* --link-color-active: #e64343; */
     --pill-bg-color: #c1c1c13b;
     --button-bg-color: var(--text-color);
 }
@@ -178,13 +154,8 @@ header {
     background-color: var(--button-bg-color);
     color: var(--background-color);
     position: fixed;
-    /* bottom: 0px; */
     bottom: 4vh;
     right: 2vw;
-    /* margin: 5rem; */
-
-    /* height: 4rem; */
-
     padding: 0.75rem 1.5rem;
     border-radius: 10rem;
 }
@@ -203,7 +174,7 @@ header {
 
 .home__intro-img{
     max-width: 6.25rem /*100px*/;
-    margin: 0 1.5rem;
+    margin-right: 1.5rem;
 
     /*drop-shadow(offset-x offset-y blur-radius color)*/
     filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.4));
@@ -285,15 +256,36 @@ header {
     width: 100%;
     max-height: 25rem;
     object-fit: cover;
+    margin: 1.75rem 0;
 }
 
 .casestudy__img-cap{
     font-weight: 300;
     font-style: italic;
 }
+.iframe__container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .widescreen{
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  .square{
+      padding-top: 100%;
+  }
 
 .casestudy__iframe{
-    margin: 2rem auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .project__container{
@@ -311,11 +303,8 @@ header {
 }
 
 .project__title{
-    /* animate gradient if i have time */
     background-image: linear-gradient(150deg, var(--accent-color), var(--accent-color-secondary));
     background-clip: text;
-    /* text clipping */
-    /*look at - https://www.youtube.com/watch?v=f3mwKLXpOLk */
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
@@ -389,8 +378,8 @@ so when this wrapper is applied, content has nice uniform container and is respo
     color: var(--link-color);
 }
 
-/*RESUME*/
 
+/*resume*/
 .textpg__container{
     margin: 0 auto;
     max-width: 40rem;
@@ -427,6 +416,7 @@ so when this wrapper is applied, content has nice uniform container and is respo
     margin-bottom: 1rem;
 }
 
+/*about*/
 .about__s1{
     display: inline-flex;
     flex-direction: row;
@@ -460,7 +450,7 @@ so when this wrapper is applied, content has nice uniform container and is respo
 }
 
 
-
+/*media queries*/
 @media screen and (max-width: 863px ){
     .casestudy__img-flex{
         width: 100%;
@@ -504,6 +494,10 @@ so when this wrapper is applied, content has nice uniform container and is respo
     .project__text{
         justify-self: flex-start;
     }
+
+    .about__s1{
+        margin: 4rem auto 3rem;
+    }
 }
 
 @media screen and (max-width: 550px ){
@@ -514,8 +508,8 @@ so when this wrapper is applied, content has nice uniform container and is respo
     .project__title-wrapper {
         margin: 3rem 0;
     }
-}
 
-@media(prefers-color-scheme: dark){
-    /*color-mode ="dark";*/
+    .about__s1{
+        flex-direction: column;
+    }
 }
