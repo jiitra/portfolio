@@ -1,16 +1,16 @@
-const contactLink = document.querySelector(".contact-link");
+const contactLink = document.querySelectorAll(".contact-link");
 
-const fileName = location.href.split("/").slice(-1); 
+const fileName = location.href.split("/").slice(-1);
 
 // light/dark mode button is only on homepage, if statement checks for it
-if(fileName=="index.html"){
+if (fileName == "index.html") {
     const colorButton = document.querySelector(".js-color-mode__btn");
     colorButton.addEventListener('click', function () {
 
         //if (colorMode == "light") {
         if (document.documentElement.getAttribute("color-mode") == "light") {
             document.documentElement.setAttribute("color-mode", "dark");
-    
+
             // Sets the user's preference in local storage
             localStorage.setItem("color-mode", "dark");
         }
@@ -26,17 +26,21 @@ function resetContact() {
         .getPropertyValue('--text-color');
 }
 
-//change color of contact header at bottom when link is clicked..
-contactLink.addEventListener('click', function () {
-    setTimeout(() => {
-        document.getElementsByClassName("footer__header")[0].style.color = getComputedStyle(document.documentElement)
-            .getPropertyValue('--accent-color-secondary');
-    }, 500);
+//for mobile and desktop links
+contactLink.forEach(element => {
+    //change color of contact header at bottom when link is clicked
+    element.addEventListener('click', function () {
+        setTimeout(() => {
+            document.getElementsByClassName("footer__header")[0].style.color = getComputedStyle(document.documentElement)
+                .getPropertyValue('--accent-color-secondary');
+        }, 500);
 
-    setTimeout(() => {
-        resetContact();
-    }, 1500);
-})
+        setTimeout(() => {
+            resetContact();
+        }, 1500);
+    })
+});
+
 
 if (
     /* This condition checks whether the user has set a site preference for dark mode OR a OS-level preference for Dark Mode AND no site preference */
@@ -53,10 +57,14 @@ if (
 /*fix in morning*/
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+    var navList = document.getElementsByClassName("mobile-nav__list")[0];
+
+    //if: displaying, hide
+    if (navList.style.display === "block") {
+        navList.style.display = "none";
+
+        //else: not displaying, show
     } else {
-      x.style.display = "block";
+        navList.style.display = "block";
     }
-  }
+}

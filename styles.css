@@ -4,8 +4,7 @@
 TO DO:
 all
 - responsive images
-- hamburger menu mobile nav
-https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+- footer links
 
 pbo
 - add wireframe images
@@ -24,6 +23,7 @@ spike
 about
 - write
 - memoji image
+- responsive img
 */
 
 :root[color-mode="light"]{
@@ -72,37 +72,6 @@ body{
     transition: background-color 0.7s ease;
 }
 
-/*NEW*/
-/* Style the navigation menu */
-.topnav {
-    /* overflow: hidden; */
-    /* background-color: #333; */
-    position: relative;
-  }
-  
-  /* Hide the links inside the navigation menu (except for logo/home) */
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  /* Style navigation menu links */
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  /* Style the hamburger menu */
-  .topnav a.icon {
-    /* background: black; */
-    display: block;
-    position: absolute;
-    right: 1;
-    top: 0;
-  }
-
 /* dim images in dark mode */
 [color-mode="dark"] img{
     filter:brightness(90%);
@@ -112,13 +81,10 @@ main{
     min-height: 90vh; /* avoids floating footer */
 }
 
-.mobile-nav{
-    display: none;
-}
-
-.header {
+header {
     padding: 1.5rem /*25px*/;
 }
+
 .header__wrapper{
     align-items: center;
     display: flex;
@@ -127,6 +93,40 @@ main{
     margin: auto;
 }
 
+.header__home-link{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/*mobile nav*/
+.mobile-nav{
+    display: none;
+    position: relative;
+    color: var(--text-color);
+}
+
+.hamburger-icon{
+    color: var(--text-color);
+}
+
+.mobile-nav__list-container{
+    display: inline-flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: 2.5vh;
+    line-height: 1.7rem;
+}
+
+.mobile-nav__list{
+    display: none;
+    list-style: none;
+}
+
+/*desktop nav*/
 .header__list{
     display: flex;
     text-transform: lowercase;
@@ -137,6 +137,8 @@ main{
     text-decoration: none;
     position: relative;
 }
+
+/*highlight on hover effect*/
 /*https://codepen.io/argyleink/pen/poEjvpd*/
 .header__link::before{
     transform: scaleX(0);
@@ -157,13 +159,6 @@ main{
     background: var(--accent-color-secondary-light);
     z-index: -1;
     transition: transform .3s ease;
-}
-
-.header__home-link{
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.3rem;
 }
 
 .header__list-item {
@@ -477,8 +472,13 @@ so when this wrapper is applied, content has nice uniform container and is respo
     .mobile-nav{
         display: block;
     }
+
     .desktop-nav{
         display: none;
+    }
+
+    .home__intro-container {
+        margin-top: 2rem;
     }
 
     .project__container{
