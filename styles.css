@@ -5,6 +5,7 @@ TO DO:
 all
 - responsive images
 - hamburger menu mobile nav
+https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 
 pbo
 - add wireframe images
@@ -71,6 +72,37 @@ body{
     transition: background-color 0.7s ease;
 }
 
+/*NEW*/
+/* Style the navigation menu */
+.topnav {
+    /* overflow: hidden; */
+    /* background-color: #333; */
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    /* background: black; */
+    display: block;
+    position: absolute;
+    right: 1;
+    top: 0;
+  }
+
 /* dim images in dark mode */
 [color-mode="dark"] img{
     filter:brightness(90%);
@@ -78,6 +110,10 @@ body{
 
 main{
     min-height: 90vh; /* avoids floating footer */
+}
+
+.mobile-nav{
+    display: none;
 }
 
 .header {
@@ -222,7 +258,8 @@ main{
 }
 
 .casestudy__header{
-    font-weight: 500;
+    font-weight: 600;
+    /* letter-spacing: 1px; */
 }
 
 .casestudy__text{
@@ -247,6 +284,12 @@ main{
 
 .casestudy__img-single{
     width: 100%;
+}
+
+.casestudy__img-hero{
+    width: 100%;
+    max-height: 25rem;
+    object-fit: cover;
 }
 
 .casestudy__img-cap{
@@ -303,7 +346,10 @@ main{
     line-height: 1.5rem;
 }
 
-/* how to make pill shrink to text? */
+.bolder{
+    font-weight: 600;
+}
+
 .pill{
     background-color: var(--pill-bg-color);
     padding: 0.8rem;
@@ -350,7 +396,7 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 /*RESUME*/
 
-.resume__container{
+.textpg__container{
     margin: 0 auto;
     max-width: 40rem;
 }
@@ -384,6 +430,38 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .resume__list-item{
     margin-bottom: 1rem;
+}
+
+.about__s1{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin: 1rem auto 3rem;
+    align-items: center;
+}
+
+.about__s2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1rem auto 3rem;
+}
+.test{
+    text-align: center;
+}
+.about__ul-text{
+    line-height: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.about__img{
+    max-width: 17rem;
+    filter: drop-shadow(0 0 0.3rem rgba(0, 0, 0, 0.2));
+}
+
+.smaller-margin{
+    margin: 0.75rem auto;
 }
 
 
