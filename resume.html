@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -64,6 +65,13 @@
         </div>
     </header>
     <main class="wrapper">
+
+        <button class="color-mode__btn js-color-mode__btn">
+            <span class="material-symbols-outlined">
+                dark_mode
+            </span>
+        </button>
+        
         <div class="resume textpg__container">
             <h1 class="resume__header">Resume</h1>
 
@@ -92,14 +100,11 @@
             <div class="resume__section">
                 <h2 class="resume__section-title">Skills</h2>
                 <ul class="resume__list">
-                    <li class="resume__list-item">Adobe Photoshop, Illustrator, InDesign, Audition, Premiere
-                        (2016-Present)
+                    <li class="resume__list-item"> <strong>Adobe:</strong> Photoshop, Illustrator, InDesign, Audition, Premiere
+                    </li>
+                    <li class="resume__list-item"><strong>Programming languages:</strong> Python, Java, Javascript, HTML, CSS, React
                     </li>
                     <li class="resume__list-item">Figma
-                    </li>
-                    <li class="resume__list-item">Programming languages: Python, Java, Javascript
-                    </li>
-                    <li class="resume__list-item">HTML/CSS
                     </li>
                 </ul>
             </div>
@@ -107,6 +112,35 @@
             <div class="resume__section">
                 <h2 class="resume__section-title">Experience</h2>
 
+                <!-- Sharing Excess -->
+                <div class="resume__job">
+
+                    <div class="resume__section-container">
+
+                        <div class="resume__section-col">
+                            <h3>sharing excess</h3>
+                            <p class="resume__job-title"><em>UI/UX designer & graphic designer</em></p>
+                        </div>
+                        <div class="resume__section-col-2">
+                            <p>Philadelphia, PA</p>
+                            <p>march 2022 – present</p>
+                        </div>
+
+                    </div>
+
+                    <ul class="resume__list">
+                        <li class="resume__list-item">
+                            redesigned and expanded the design system, introducing programmer-optimized naming conventions, dark mode functionality, and the first usage of a secondary font
+                        </li>
+                        <li class="resume__list-item">
+                            text
+                        </li>
+                        <li class="resume__list-item">
+                            text
+                        </li>
+                    </ul>
+
+                </div>
                 <!-- MOGO -->
                 <div class="resume__job">
 
@@ -198,46 +232,8 @@
                     </ul>
 
                 </div>
+                <a href ="media/JillianTracyResume_2022.pdf" target = "_blank">link to pdf version</a>
             </div>
-
-            <div class="resume__section">
-                <h2 class="resume__section-title">Project Experience</h2>
-
-                <div class="resume__job">
-
-                    <div class="resume__section-container">
-
-                        <div class="resume__section-col">
-                            <h3>"Spike's Underwater Adventure" App Development</h3>
-                            <p class="resume__job-title"><em>Graphic Design Lead, Developer</em></p>
-                        </div>
-                        <div class="resume__section-col-2">
-                            <p>Wall Township, NJ</p>
-                            <p>September – December 2019</p>
-                        </div>
-
-                    </div>
-
-                    <ul class="resume__list">
-                        <li class="resume__list-item">
-                            Collaborated with team of 3 other students to conceptualize and create app that allowed
-                            young
-                            children to improve motor skills
-                        </li>
-                        <li class="resume__list-item">
-                            Combined java programming and graphic design skills to contribute to team and enhance app
-                            interface
-                        </li>
-                        <li class="resume__list-item">
-                            Facilitated testing with elementary school students and listened to feedback about the game
-                        </li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-            <a href ="media/JillianTracyResume_2022.pdf" target = "_blank">link to pdf version</a>
 
         </div>
     </main>
@@ -252,7 +248,12 @@
                         <a class="footer__list-link" href="mailto: jthappiness@gmail.com" target="_blank">Email</a>
                     </li>
                     <li class="footer__list-item">
-                        <a class="footer__list-link" target="_blank" href="https://www.linkedin.com/in/jillian-tracy-095ba91b0/">LinkedIn</a>
+                        <a class="footer__list-link" target="_blank"
+                            href="https://www.linkedin.com/in/jilltracy/">LinkedIn</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" target="_blank"
+                            href="https://github.com/jiitra">github</a>
                     </li>
                 </ul>
             </nav>
