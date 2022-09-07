@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html color-mode="light" lang="en">
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-- https://github.com/MikeCarbone/IDM222/blob/master/docs/assignments/assignment-final.md#expectations
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
+<html color-mode="light" lang="en"></html>
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +10,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -63,8 +58,11 @@
     </header>
 
     <main class="wrapper">
-        <button class="color-mode__btn js-color-mode__btn">Toggle Light Mode</button>
-
+        <button class="color-mode__btn js-color-mode__btn">
+            <span class="material-symbols-outlined">
+                dark_mode
+            </span>
+        </button>
         <div class="home__intro">
             <div class="home__intro-container">
                 <img class="home__intro-img" alt="Jill's Memoji" src="img/favicon.png" />
@@ -83,77 +81,24 @@
                     <h2 class="project__title project__title-home">Podcast But Outside</h2>
                     <p class="project__caption">Interface Redesign</p>
                 </div>
-
                 <div class="project__cover-container">
 
-                    <div class="project__cover">
+                    <figure class="project__cover">
                         <a href="pbo.html">
                             <picture>
                                 <source media="(max-width:450px)" srcset="img/pbo-cover-small.jpg">
                                 <img class="project__img" alt="Podcast But Outside Project Cover"
                                     src="img/pbo-cover.jpg" />
                             </picture>
+                            <figcaption class="project__img-cap">
+                                View Project
+                            </figcaption>
                         </a>
-                    </div>
-
-                    <p class="project__img-cap">Click the image for project details</p>
+                    </figure>
                 </div>
-
             </div>
 
-            <div class="project__container">
-
-                <div class="project__text">
-                    <h3 class="project-number">Project 02</h3>
-                    <h2 class="project__title project__title-home">Web Traffic</h2>
-                    <p class="project__caption">Concept Creation & Prototype</p>
-                </div>
-
-                <div class="project__cover-container">
-
-                    <div class="project__cover">
-                        <a href="webtraffic.html">
-                            <picture>
-                                <source media="(max-width:450px)" srcset="img/webtraffic-cover-small.jpg">
-                                <source media="(max-width:900px)" srcset="img/webtraffic-cover-med.jpg">
-                                <img class="project__img" alt="Web Traffic Project Cover"
-                                    src="img/webtraffic-cover.jpg" />
-                            </picture>
-                        </a>
-                    </div>
-
-                    <p class="project__img-cap">Click the image for project details</p>
-                </div>
-
-            </div>
-
-            <div class="project__container">
-
-                <div class="project__text">
-                    <h3 class="project-number">Project 03</h3>
-                    <h2 class="project__title project__title-home">Spike's Underwater Adventure</h2>
-                    <p class="project__caption">App Development, Graphic Design Lead</p>
-                </div>
-
-                <div class="project__cover-container">
-
-
-                    <div class="project__cover">
-                        <a href="spike.html">
-                            <picture>
-                                <source media="(max-width:450px)" srcset="img/spike-cover-small.jpg">
-                                <img class="project__img" alt="Spike's Underwater Adventure Project Cover"
-                                    src="img/spike-cover.jpg" />
-                            </picture>
-                        </a>
-                    </div>
-
-                    <p class="project__img-cap">Click the image for project details</p>
-                </div>
-
-            </div>
-
-        </div>
+ 
 
     </main>
 
@@ -167,7 +112,11 @@
                     </li>
                     <li class="footer__list-item">
                         <a class="footer__list-link" target="_blank"
-                            href="https://www.linkedin.com/in/jillian-tracy-095ba91b0/">LinkedIn</a>
+                            href="https://www.linkedin.com/in/jilltracy/">LinkedIn</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" target="_blank"
+                            href="https://github.com/jiitra">github</a>
                     </li>
                 </ul>
             </nav>
