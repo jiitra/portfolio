@@ -11,12 +11,12 @@
 
 /*I referenced https://ryanfeigenbaum.com/dark-mode/ */
 :root[color-mode="dark"]{
-    --background-color: #181818;
+    --background-color: #141416;
     --accent-color: #05b27b;
     --accent-color-secondary: #3188ff;
     --accent-color-secondary-light: #009ed199;
     --text-color: #f8f8f8;
-    --pill-bg-color: #c1c1c13b;
+    --pill-bg-color: #6c6c793b;
     --button-bg-color: var(--text-color);
 }
 
@@ -39,6 +39,10 @@ body{
     color: var(--text-color);
 
     transition: background-color 0.7s ease;
+}
+
+a{
+    color: var( --accent-color-secondary);
 }
 
 /* dim images in dark mode */
@@ -149,8 +153,17 @@ header {
     position: fixed;
     bottom: 4vh;
     right: 2vw;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 0.7rem;
     border-radius: 10rem;
+    margin: auto;
+
+    transition: transform .2s ease;
+}
+
+.color-mode__btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+   
 }
 
 .home__intro{
@@ -191,23 +204,31 @@ header {
 
 .project__cover{
     overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .project__img{
     max-width: 31.25rem;
     width: 100%;
-
+    z-index: 1;
     transition: transform .5s ease;
+
 }
 
 .project__img-cap{
     text-align: center;
-    font-weight: 300;
-    padding-top: 1.3rem;
+    font-weight: 700;
+    font-size: 26px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: var(--accent-color-secondary);
+    
 }
 
 .project__cover:hover .project__img{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .work{
@@ -354,7 +375,9 @@ so when this wrapper is applied, content has nice uniform container and is respo
 }
 
 .footer{
-    margin: 2rem 0;
+    padding: 4rem;
+
+    background-color: var(--pill-bg-color);
 }
 
 .footer__header{
@@ -364,11 +387,7 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .footer__list-item{
     list-style-type: none;
-    margin: 0.5rem 0;
-}
-
-.footer__list-link{
-    color: var(--link-color);
+    margin: 1rem 0;
 }
 
 
@@ -397,6 +416,10 @@ so when this wrapper is applied, content has nice uniform container and is respo
     gap: 1.5rem;
 }
 
+.resume__job{
+    margin-bottom: 3rem;
+}
+
 .resume__section-col-2{
     text-align: right;
 }
@@ -407,6 +430,14 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .resume__list-item{
     margin-bottom: 1rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 100,
+  'GRAD' -25,
+  'opsz' 48
 }
 
 /*about*/
