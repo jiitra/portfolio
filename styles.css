@@ -59,6 +59,23 @@ header {
     padding: 1.5rem /*25px*/;
 }
 
+#sticky{
+    position: sticky;
+    top: 25%;
+}
+
+.sections{
+    align-items:flex-start;
+    display: flex;
+    flex-direction: column;
+    max-width: 75rem;
+    margin: auto;
+}
+
+.sections__ul{
+    list-style-type: none;
+}
+
 .header__wrapper{
     align-items: center;
     display: flex;
@@ -482,6 +499,10 @@ so when this wrapper is applied, content has nice uniform container and is respo
 @media screen and (max-width: 863px ){
     .casestudy__img-flex{
         width: 100%;
+    }
+    
+    .sections{
+        display: none;
     }
 }
 
