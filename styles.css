@@ -68,6 +68,10 @@ header {
     margin: 0;
 }
 
+.round{
+    border-radius: 20px;
+}
+
 .sections{
     align-items:flex-start;
     display: flex;
