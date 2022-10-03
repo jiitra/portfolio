@@ -65,20 +65,20 @@
         </div>
     </header>
 
-    <div class="sections" id="sticky">
-        <h2>sections</h2>
-        <ul class="sections__ul">
-            <li>
-               <a href="#s1"> app description</a>
-            </li>
-            <li>
-                <a href="#s2">original interface</a>
-            </li>
-            <li>
-                <a href="#s3">design system</a>
-            </li>
-        </ul>
-    </div>
+        <!-- <div class="sections" id="sticky">
+            <h2>sections</h2>
+            <ul class="sections__ul">
+                <li class="sections__ul_li">
+                <a href="#s1" class="sections__ul_link">starting point</a>
+                </li>
+                <li class="sections__ul_li">
+                    <a href="#s2" class="sections__ul_link">original interface</a>
+                </li>
+                <li class="sections__ul_li">
+                    <a href="#s3" class="sections__ul_link">design system</a>
+                </li>
+            </ul>
+        </div> -->
 
     <main class="wrapper">
         <div class="work">
@@ -89,7 +89,7 @@
                 </span>
             </button>
 
-            <div class="project__title-wrapper">
+            <div class="project__title-wrapper" id="fra__header">
                 <h1 class="project__title project__title-case">fighting food insecurity</h1>
 
                 <!-- <div class="project__caption-col">
@@ -102,16 +102,56 @@
                 </div> -->
             </div>
 
-            <p class="casestudy__text">I joined Sharing Excess as the company’s first UI/UX designer. </p>
-            <p class="casestudy__text"> My team consisted of me, one software engineer, and the director of technology.</p>
-            <p class="casestudy__text"> Here's what we did.</p>
+            <div class="casestudy__img-container">
+                <picture>
+                    <source media="(max-width:450px)" srcset="img/fra-main-sm.png">
+                    <source media="(max-width:900px)" srcset="img/fra-main-med.png">
+                    <img class="casestudy__img-single" src="img/fra-main.png">
+                </picture>
+            </div>
 
-            <h2 class="casestudy__header" id="s1">app description</h2>
+            <p class="casestudy__text">I joined Sharing Excess as the company’s first UI/UX designer. </p>
+            <p class="casestudy__text"> Our small team consisted of me, one software engineer, and the director of technology.</p>
+            <p class="casestudy__text"> Together, we rebuilt an app from the ground up.</p>
+
+            <h2 class="casestudy__header" id="s1">starting point</h2>
             <p class="casestudy__text">The Sharing Excess Food Rescue App is a web-based app used to rescue and deliver surplus food. </p>
             <p class="casestudy__text">Rescue drivers and wholesale employees use the app to document data about how many pounds of food were rescued and track pickup and delivery routes. </p>
+            <p class="casestudy__text">Pain points included: </p>
+            <ul>
+                <li class="casestudy__text casestudy__text_li">
+                    Cluttered interface, with too much information on cards
+                </li>
+                <li class="casestudy__text casestudy__text_li">
+                    Tedious data entry for wholesale employees
+                </li>
+                <li class="casestudy__text casestudy__text_li">
+                    Color pairings with brand green required excessive drop shadows and had poor contrast
+                </li>
+            </ul>
 
-            <h2 class="casestudy__header" id="s2">original interface</h2>
-            <h2 class="casestudy__header" id="s3">design system restructuring</h2>
+            <div class="casestudy__img-container">
+            <picture>
+                <source media="(max-width:450px)" srcset="img/oldnewfra-1-mobile.png">
+                <img class="casestudy__img-single" src="img/oldnewfra-1.png">
+            </picture>
+
+            <p class="casestudy__img-cap">Old interface (first) and new interface (second).</p>
+        </div>
+
+            <h2 class="casestudy__header" id="s3">introducing dark mode</h2>
+            <p class="casestudy__text">The Sharing Excess Food Rescue App works with you and accomodates your UI preferences.</p>
+
+            <picture>
+                <source media="(max-width:450px)" srcset="img/fra-dark-mobile.png">
+                <img class="casestudy__img-single" src="img/fra-dark.png">
+            </picture>
+
+            <p class="casestudy__text">For this feature addition, I designed a dark mode color palette that maintains good contrast and color hierarchy. I designed the grey colors to be blue-toned, making the color palette more lively.</p>
+
+            <h2 class="casestudy__header" id="s3">design system elevation</h2>
+
+            <h2 class="casestudy__header" id="s3">welcome, poppins!</h2>
 
 
     </main>

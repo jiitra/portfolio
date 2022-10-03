@@ -64,6 +64,10 @@ header {
     top: 25%;
 }
 
+#fra__header{
+    margin: 0;
+}
+
 .sections{
     align-items:flex-start;
     display: flex;
@@ -74,6 +78,14 @@ header {
 
 .sections__ul{
     list-style-type: none;
+}
+
+.sections__ul_li{
+    padding: 0.3rem 0;
+}
+
+.sections__ul_link{
+    text-decoration: none;
 }
 
 .header__wrapper{
@@ -260,6 +272,10 @@ header {
     text-transform: none;
     margin: 1.75rem 0;
     font-weight: 300;
+}
+.casestudy__text_li{
+    margin-left: 2rem;
+    line-height: 1rem;
 }
 
 .casestudy__img-container{
