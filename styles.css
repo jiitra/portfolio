@@ -5,7 +5,7 @@
     --accent-color-secondary-light: #29cbff73;
     --text-color: #121212;
     --mid-dark-color: #414243;
-    --pill-bg-color: #c1c1c13b;
+    --pill-bg-color: #b3b3b33b;
     --button-bg-color: var(--accent-color-secondary);
 }
 
@@ -16,7 +16,8 @@
     --accent-color-secondary: #3188ff;
     --accent-color-secondary-light: #009ed199;
     --text-color: #f8f8f8;
-    --pill-bg-color: #6c6c793b;
+    --mid-dark-color: #bbb6b6;
+    --pill-bg-color: #4949513b;
     --button-bg-color: var(--text-color);
 }
 
@@ -56,6 +57,35 @@ main{
 
 header {
     padding: 1.5rem /*25px*/;
+}
+
+#sticky{
+    position: sticky;
+    top: 25%;
+}
+
+#fra__header{
+    margin: 0;
+}
+
+.sections{
+    align-items:flex-start;
+    display: flex;
+    flex-direction: column;
+    max-width: 75rem;
+    margin: auto;
+}
+
+.sections__ul{
+    list-style-type: none;
+}
+
+.sections__ul_li{
+    padding: 0.3rem 0;
+}
+
+.sections__ul_link{
+    text-decoration: none;
 }
 
 .header__wrapper{
@@ -218,13 +248,8 @@ header {
 
 .project__img-cap{
     text-align: center;
-    font-weight: 700;
-    font-size: 26px;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: var(--accent-color-secondary);
-    
+    font-weight: 300;
+    padding-top: 1.3rem;
 }
 
 .project__cover:hover .project__img{
@@ -247,6 +272,10 @@ header {
     text-transform: none;
     margin: 1.75rem 0;
     font-weight: 300;
+}
+.casestudy__text_li{
+    margin-left: 2rem;
+    line-height: 1rem;
 }
 
 .casestudy__img-container{
@@ -304,7 +333,7 @@ header {
 
 .project__container{
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
     justify-items: center;
     gap: 2rem;
     margin: 4rem /*30px*/ 0;
@@ -327,7 +356,14 @@ header {
 
 .project__title-home{
     margin: 1rem 0;
-    font-size: 2.25rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.project__description{
+    text-transform: none;
+    font-weight: 300;
+    line-height: 1.4rem;
 }
 
 .project__title-case{
@@ -342,6 +378,7 @@ header {
     font-size: 0.9rem;
     letter-spacing: 0.09rem;
     line-height: 1.5rem;
+    margin: 1rem 0;
 }
 
 .bolder{
@@ -478,6 +515,10 @@ so when this wrapper is applied, content has nice uniform container and is respo
 @media screen and (max-width: 863px ){
     .casestudy__img-flex{
         width: 100%;
+    }
+    
+    .sections{
+        display: none;
     }
 }
 

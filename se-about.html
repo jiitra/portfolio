@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html color-mode="light" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sharingexcess.com — jill tracy</title>
+    <!-- load in first so page loads accurately -->
+    <script>
+        if (
+            localStorage.getItem("color-mode") === "dark" ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+                !localStorage.getItem("color-mode"))
+        ) {
+            document.documentElement.setAttribute("color-mode", "dark");
+        }
+    </script>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <a class="header__link header__home-link" href="index.html">jill tracy</a>
+
+            <!-- mobile nav -->
+            <nav class="mobile-nav">
+                <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mobile-nav__list-container">
+                    <ul class="mobile-nav__list">
+                        <li>
+                            <a class="header__link" href="about.html">about</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="resume.html">resume</a>
+                        </li>
+                        <li>
+                            <a class="header__link contact-link" href="#footer">contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- desktop nav -->
+            <nav class="desktop-nav">
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a class="header__link header__list-link" href="about.html">about</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a class="header__link header__list-link" href="resume.html">resume</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a class="header__link header__list-link contact-link" href="#footer">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper">
+        <div class="work">
+
+            <button class="color-mode__btn js-color-mode__btn">
+                <span class="material-symbols-outlined">
+                    dark_mode
+                </span>
+            </button>
+
+            <div class="project__title-wrapper">
+                <h1 class="project__title project__title-case">sharingexcess.com "about" page redesign</h1>
+
+                <!-- <div class="project__caption-col">
+                    <div class="pill">
+                        <p class="project__caption">2022</p>
+                    </div>
+                    <div class="pill">
+                        <h3 class="project__caption">Interface Redesign</h3>
+                    </div>
+                </div> -->
+                <p class="casestudy__text">View live site <a href="https://sharingexcess.com/about" target="_blank">here</a>.
+            </div>
+
+            <h2 class="casestudy__header">background</h2>
+            <p class="casestudy__text">I joined Sharing Excess as the company’s first UI/UX designer. </p>
+            <p class="casestudy__text"> My team consisted of me, one software engineer, and the director of technology.</p>
+            <p class="casestudy__text"> Here's what we did.</p>
+
+
+
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="wrapper">
+            <nav>
+                <h2 class="footer__header">Contact</h2>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" href="mailto: jthappiness@gmail.com" target="_blank">Email</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" target="_blank"
+                            href="https://www.linkedin.com/in/jilltracy/">LinkedIn</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" target="_blank"
+                            href="https://github.com/jiitra">github</a>
+                    </li>
+                </ul>
+            </nav>
+            <p>&copy;2022 Jillian Tracy</p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

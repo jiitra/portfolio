@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html color-mode="light" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sharingexcess.com — jill tracy</title>
+    <!-- load in first so page loads accurately -->
+    <script>
+        if (
+            localStorage.getItem("color-mode") === "dark" ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+                !localStorage.getItem("color-mode"))
+        ) {
+            document.documentElement.setAttribute("color-mode", "dark");
+        }
+    </script>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <a class="header__link header__home-link" href="index.html">jill tracy</a>
+
+            <!-- mobile nav -->
+            <nav class="mobile-nav">
+                <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="mobile-nav__list-container">
+                    <ul class="mobile-nav__list">
+                        <li>
+                            <a class="header__link" href="about.html">about</a>
+                        </li>
+                        <li>
+                            <a class="header__link" href="resume.html">resume</a>
+                        </li>
+                        <li>
+                            <a class="header__link contact-link" href="#footer">contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- desktop nav -->
+            <nav class="desktop-nav">
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a class="header__link header__list-link" href="about.html">about</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a class="header__link header__list-link" href="resume.html">resume</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a class="header__link header__list-link contact-link" href="#footer">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <!-- <div class="sections" id="sticky">
+            <h2>sections</h2>
+            <ul class="sections__ul">
+                <li class="sections__ul_li">
+                <a href="#s1" class="sections__ul_link">starting point</a>
+                </li>
+                <li class="sections__ul_li">
+                    <a href="#s2" class="sections__ul_link">original interface</a>
+                </li>
+                <li class="sections__ul_li">
+                    <a href="#s3" class="sections__ul_link">design system</a>
+                </li>
+            </ul>
+        </div> -->
+
+    <main class="wrapper">
+        <div class="work">
+
+            <button class="color-mode__btn js-color-mode__btn">
+                <span class="material-symbols-outlined">
+                    dark_mode
+                </span>
+            </button>
+
+            <div class="project__title-wrapper" id="fra__header">
+                <h1 class="project__title project__title-case">fighting food insecurity</h1>
+
+                <!-- <div class="project__caption-col">
+                    <div class="pill">
+                        <p class="project__caption">2022</p>
+                    </div>
+                    <div class="pill">
+                        <h3 class="project__caption">Interface Redesign</h3>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="casestudy__img-container">
+                <picture>
+                    <source media="(max-width:450px)" srcset="img/fra-main-sm.png">
+                    <source media="(max-width:900px)" srcset="img/fra-main-med.png">
+                    <img class="casestudy__img-single" src="img/fra-main.png">
+                </picture>
+            </div>
+
+            <p class="casestudy__text">I joined Sharing Excess as the company’s first UI/UX designer. </p>
+            <p class="casestudy__text"> Our small team consisted of me, one software engineer, and the director of technology.</p>
+            <p class="casestudy__text"> Together, we rebuilt an app from the ground up.</p>
+
+            <h2 class="casestudy__header" id="s1">starting point</h2>
+            <p class="casestudy__text">The Sharing Excess Food Rescue App is a web-based app used to rescue and deliver surplus food. </p>
+            <p class="casestudy__text">Rescue drivers and wholesale employees use the app to document data about how many pounds of food were rescued and track pickup and delivery routes. </p>
+            <p class="casestudy__text">Pain points included: </p>
+            <ul>
+                <li class="casestudy__text casestudy__text_li">
+                    Cluttered interface, with too much information on cards
+                </li>
+                <li class="casestudy__text casestudy__text_li">
+                    Tedious data entry for wholesale employees
+                </li>
+                <li class="casestudy__text casestudy__text_li">
+                    Color pairings with brand green required excessive drop shadows and had poor contrast
+                </li>
+            </ul>
+
+            <div class="casestudy__img-container">
+            <picture>
+                <source media="(max-width:450px)" srcset="img/oldnewfra-1-mobile.png">
+                <img class="casestudy__img-single" src="img/oldnewfra-1.png">
+            </picture>
+
+            <p class="casestudy__img-cap">Old interface (first) and new interface (second).</p>
+        </div>
+
+            <h2 class="casestudy__header" id="s3">introducing dark mode</h2>
+            <p class="casestudy__text">The Sharing Excess Food Rescue App works with you and accomodates your UI preferences.</p>
+
+            <picture>
+                <source media="(max-width:450px)" srcset="img/fra-dark-mobile.png">
+                <img class="casestudy__img-single" src="img/fra-dark.png">
+            </picture>
+
+            <p class="casestudy__text">For this feature addition, I designed a dark mode color palette that maintains good contrast and color hierarchy. I designed the grey colors to be blue-toned, making the color palette more lively.</p>
+
+            <h2 class="casestudy__header" id="s3">design system elevation</h2>
+
+            <h2 class="casestudy__header" id="s3">welcome, poppins!</h2>
+
+
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="wrapper">
+            <nav>
+                <h2 class="footer__header">Contact</h2>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" href="mailto: jthappiness@gmail.com" target="_blank">Email</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" target="_blank"
+                            href="https://www.linkedin.com/in/jilltracy/">LinkedIn</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-link" target="_blank"
+                            href="https://github.com/jiitra">github</a>
+                    </li>
+                </ul>
+            </nav>
+            <p>&copy;2022 Jillian Tracy</p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
