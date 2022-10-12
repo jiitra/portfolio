@@ -274,7 +274,7 @@ header {
 .casestudy__text{
     line-height: 1.75rem;
     text-transform: none;
-    margin: 1.75rem 0;
+    margin: 1.5rem 0;
     font-weight: 300;
 }
 .casestudy__text_li{
@@ -483,6 +483,11 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
 .smaller{
     max-width: 300px;
+    height: 100%;
+}
+
+.medium{
+    max-width: 500px;
     height: 100%;
 }
 .material-symbols-outlined {

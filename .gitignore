@@ -1,3 +1,6 @@
 
-img/*
-media/*
+img/
+media/
+.DS_Store
+.DS_Store?
+._*
