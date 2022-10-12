@@ -473,6 +473,18 @@ so when this wrapper is applied, content has nice uniform container and is respo
     margin-bottom: 1rem;
 }
 
+.rounded{
+    border-radius: 20px;
+}
+
+.shadow{
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.173));
+}
+
+.smaller{
+    max-width: 300px;
+    height: 100%;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -580,5 +592,9 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
     .about__s1{
         flex-direction: column;
+    }
+
+    .smaller{
+        max-width: 200px;
     }
 }
