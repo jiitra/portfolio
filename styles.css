@@ -11,7 +11,7 @@
 
 /*I referenced https://ryanfeigenbaum.com/dark-mode/ */
 :root[color-mode="dark"]{
-    --background-color: #141416;
+    --background-color: #1e1e22;
     --accent-color: #05b27b;
     --accent-color-secondary: #3188ff;
     --accent-color-secondary-light: #009ed199;
@@ -45,6 +45,8 @@ body{
 a{
     color: var( --accent-color-secondary);
 }
+
+
 
 /* dim images in dark mode */
 [color-mode="dark"] img{
@@ -267,19 +269,26 @@ header {
 }
 
 .casestudy__header{
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
     font-weight: 600;
-    /* letter-spacing: 1px; */
 }
 
 .casestudy__text{
-    line-height: 1.75rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
     text-transform: none;
-    margin: 1.5rem 0;
     font-weight: 300;
+    margin-bottom: 1rem;
 }
+
+.casestudy__ul{
+    margin: 1.5rem 0;
+}
+
 .casestudy__text_li{
     margin-left: 2rem;
-    line-height: 1rem;
+    line-height: 1.7rem;
 }
 
 .casestudy__img-container{
@@ -518,7 +527,9 @@ so when this wrapper is applied, content has nice uniform container and is respo
     text-align: center;
 }
 .about__ul-text{
-    line-height: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 300;
     margin-top: 0.5rem;
 }
 

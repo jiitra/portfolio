@@ -1,269 +1,305 @@
 <!DOCTYPE html>
 <html color-mode="light" lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>resume — jill tracy</title>
     <!-- load in first so page loads accurately -->
     <script>
-        if (
-            localStorage.getItem("color-mode") === "dark" ||
-            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-                !localStorage.getItem("color-mode"))
-        ) {
-            document.documentElement.setAttribute("color-mode", "dark");
-        }
+      if (
+        localStorage.getItem("color-mode") === "dark" ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+          !localStorage.getItem("color-mode"))
+      ) {
+        document.documentElement.setAttribute("color-mode", "dark");
+      }
     </script>
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="header__wrapper">
-            <a class="header__link header__home-link" href="index.html">jill tracy</a>
+      <div class="header__wrapper">
+        <a class="header__link header__home-link" href="index.html"
+          >jill tracy</a
+        >
 
-            <!-- mobile nav -->
-            <nav class="mobile-nav">
-                <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <div class="mobile-nav__list-container">
-                    <ul class="mobile-nav__list">
-                        <li>
-                            <a class="header__link" href="about.html">about</a>
-                        </li>
-                        <li>
-                            <a class="header__link" href="resume.html">resume</a>
-                        </li>
-                        <li>
-                            <a class="header__link contact-link" href="#footer">contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <!-- mobile nav -->
+        <nav class="mobile-nav">
+          <a
+            href="javascript:void(0);"
+            class="hamburger-icon"
+            onclick="myFunction()"
+          >
+            <i class="fa fa-bars"></i>
+          </a>
+          <div class="mobile-nav__list-container">
+            <ul class="mobile-nav__list">
+              <li>
+                <a class="header__link" href="about.html">about</a>
+              </li>
+              <li>
+                <a class="header__link" href="resume.html">resume</a>
+              </li>
+              <li>
+                <a class="header__link contact-link" href="#footer">contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-            <!-- desktop nav -->
-            <nav class="desktop-nav">
-                <ul class="header__list">
-                    <li class="header__list-item">
-                        <a class="header__link header__list-link" href="about.html">About</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a class="active header__list-link" href="resume.html">Resume</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a class="header__link header__list-link contact-link" href="#footer">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <!-- desktop nav -->
+        <nav class="desktop-nav">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a class="header__link header__list-link" href="about.html"
+                >About</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a class="active header__list-link" href="resume.html">Resume</a>
+            </li>
+            <li class="header__list-item">
+              <a
+                class="header__link header__list-link contact-link"
+                href="#footer"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="wrapper">
+      <button class="color-mode__btn js-color-mode__btn">
+        <span class="material-symbols-outlined"> dark_mode </span>
+      </button>
 
-        <button class="color-mode__btn js-color-mode__btn">
-            <span class="material-symbols-outlined">
-                dark_mode
-            </span>
-        </button>
-        
-        <div class="resume textpg__container">
-            <h1 class="resume__header">Resume</h1>
+      <div class="resume textpg__container">
+        <h1 class="resume__header">Resume</h1>
 
-            <div class="resume__section">
-                <h2 class="resume__section-title">Education</h2>
-                <div class="resume__section-container">
-                    <div class="resume__section-col">
-                        <h3>Drexel University</h3>
-                        <p>Bachelor of Science in User Experience & Interaction Design</p>
-                    </div>
-                    <div class="resume__section-col-2">
-                        <p>Philadelphia, PA</p>
-                        <p>Anticipated Graduation: June 2025</p>
-                    </div>
-                    <div class="resume__section-col">
-                        <h3>Rochester Institute of Technology</h3>
-                        <p>Bachelor of Science in New Media Interactive Development</p>
-                    </div>
-                    <div class="resume__section-col-2">
-                        <p>Rochester, NY</p>
-                        <p>Attended August 2020 – May 2021</p>
-                    </div>
-                </div>
+        <div class="resume__section">
+          <h2 class="resume__section-title">Education</h2>
+          <div class="resume__section-container">
+            <div class="resume__section-col">
+              <h3>Drexel University</h3>
+              <p>Bachelor of Science in User Experience & Interaction Design</p>
             </div>
-
-            <div class="resume__section">
-                <h2 class="resume__section-title">Skills</h2>
-                <ul class="resume__list">
-                    <li class="resume__list-item"> <strong>Adobe:</strong> Photoshop, Illustrator, InDesign, Audition, Premiere
-                    </li>
-                    <li class="resume__list-item"><strong>Programming languages:</strong> Python, Java, Javascript, React
-                    </li>
-                    <li class="resume__list-item">HTML & CSS
-                    </li>
-                    <li class="resume__list-item">Figma
-                    </li>
-                </ul>
+            <div class="resume__section-col-2">
+              <p>Philadelphia, PA</p>
+              <p>Anticipated Graduation: June 2025</p>
             </div>
-
-            <div class="resume__section">
-                <h2 class="resume__section-title">Experience</h2>
-
-                <!-- Sharing Excess -->
-                <div class="resume__job">
-
-                    <div class="resume__section-container">
-
-                        <div class="resume__section-col">
-                            <h3>sharing excess</h3>
-                            <p class="resume__job-title"><em>UI/UX designer & graphic designer</em></p>
-                        </div>
-                        <div class="resume__section-col-2">
-                            <p>Philadelphia, PA</p>
-                            <p>march 2022 – present</p>
-                        </div>
-
-                    </div>
-
-                    <ul class="resume__list">
-                        <li class="resume__list-item">
-                            redesigned and expanded the design system, introducing programmer-optimized naming conventions, dark mode functionality, and the first usage of a secondary font
-                        </li>
-                        <li class="resume__list-item">
-                            text
-                        </li>
-                        <li class="resume__list-item">
-                            text
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- MOGO -->
-                <div class="resume__job">
-
-                    <div class="resume__section-container">
-
-                        <div class="resume__section-col">
-                            <h3>MOGO Korean Fusion Tacos</h3>
-                            <p class="resume__job-title"><em>Shift Manager</em></p>
-                        </div>
-                        <div class="resume__section-col-2">
-                            <p>Asbury Park, NJ</p>
-                            <p>July – September 2021</p>
-                        </div>
-
-                    </div>
-
-                    <ul class="resume__list">
-                        <li class="resume__list-item">
-                            Instituted daily prep list according to anticipated sales and delegated tasks, ensuring
-                            smooth
-                            kitchen operations throughout the day
-                        </li>
-                        <li class="resume__list-item">
-                            Trained new hires thoroughly to maximize efficiency and team performance
-                        </li>
-                        <li class="resume__list-item">
-                            Motivated employees by celebrating work well done to create a positive and encouraging
-                            workplace
-                        </li>
-                    </ul>
-
-                    <div class="resume__section-container">
-
-                        <div class="resume__section-col">
-                            <p class="resume__job-title"><em>Front Counter</em></p>
-                        </div>
-                        <div class="resume__section-col-2">
-                            <p>May – July 2021</p>
-                        </div>
-
-                    </div>
-
-                    <ul class="resume__list">
-                        <li class="resume__list-item">
-                            Communicated with kitchen to verify complicated orders and satisfy customers
-                        </li>
-                        <li class="resume__list-item">
-                            Completed restocking tasks in between transactions to use downtime constructively
-                        </li>
-                        <li class="resume__list-item">
-                            Ensured thorough cleaning of equipment and surfaces in compliance with health standards
-                        </li>
-                    </ul>
-
-                </div>
-
-                <!-- Hatteras -->
-                <div class="resume__job">
-
-                    <div class="resume__section-container">
-
-                        <div class="resume__section-col">
-                            <h3>Hatteras Press</h3>
-                            <p class="resume__job-title"><em>Graphic Design and Marketing Intern</em></p>
-                        </div>
-                        <div class="resume__section-col-2">
-                            <p>Tinton Falls, NJ</p>
-                            <p>February – August 2020</p>
-                        </div>
-
-                    </div>
-
-                    <ul class="resume__list">
-                        <li class="resume__list-item">
-                            Designed the first-ever company lookbook, showcasing samples of the company’s print
-                            capabilities
-                            to potential customers
-                        </li>
-                        <li class="resume__list-item">
-                            Created marketing materials and graphics to help local businesses enforce COVID-19
-                            precautions,
-                            within 5-day turnaround
-                        </li>
-                        <li class="resume__list-item">
-                            Worked full-time hours remotely during the summer of 2020, emphasizing correspondence with
-                            my
-                            supervisor and efficient time management
-                        </li>
-                    </ul>
-
-                </div>
-                <a href ="media/JillianTracyResume_2022.pdf" target = "_blank">link to pdf version</a>
+            <div class="resume__section-col">
+              <h3>Rochester Institute of Technology</h3>
+              <p>Bachelor of Science in New Media Interactive Development</p>
             </div>
-
+            <div class="resume__section-col-2">
+              <p>Rochester, NY</p>
+              <p>Attended August 2020 – May 2021</p>
+            </div>
+          </div>
         </div>
+
+        <div class="resume__section">
+          <h2 class="resume__section-title">Skills</h2>
+          <div class="resume__section-col">
+            <h3>software</h3>
+            <p>
+              Figma • Adobe CC (Photoshop, Illustrator, InDesign, Audition,
+              Premiere, After Effects) • HTML • CSS • Python • Java • Javascript
+              • PHP • Git • VS Code
+            </p>
+          </div>
+          <br />
+          <div class="resume__section-col">
+            <h3>design</h3>
+            <p>
+              Wireframing • Interactive Prototyping • Agile Development •
+              Microinteraction Design • Information Architecture • Visual
+              Communication • Persona Creation
+            </p>
+          </div>
+        </div>
+
+        <div class="resume__section">
+          <h2 class="resume__section-title">Experience</h2>
+
+          <!-- Sharing Excess -->
+          <div class="resume__job">
+            <div class="resume__section-container">
+              <div class="resume__section-col">
+                <h3>sharing excess</h3>
+                <p class="resume__job-title">
+                  <em>UI/UX designer & graphic designer</em>
+                </p>
+              </div>
+              <div class="resume__section-col-2">
+                <p>Philadelphia, PA</p>
+                <p>march 2022 – present</p>
+              </div>
+            </div>
+
+            <ul class="resume__list">
+              <li class="resume__list-item">
+                Joined company as the first UI/UX designer, improved experience
+                flow and established design system of an internal app within 10
+                weeks
+              </li>
+              <li class="resume__list-item">
+                Report directly to the Director of Technology and Executive
+                Director, manage simultaneous UX and graphic design project
+                deliverables independently
+              </li>
+              <li class="resume__list-item">
+                Led the design and front-end development of webpage expansion,
+                learning and implementing Next.js to support existing codebase
+              </li>
+              <li class="resume__list-item">
+                Collaborate with team of 3 software developers to devise
+                creative and efficient solutions, addressing user pain points
+              </li>
+              <li class="resume__list-item">
+                Incorporate graphic design work into wireframes and digital
+                designs to enforce brand voice
+              </li>
+            </ul>
+          </div>
+          <!-- MOGO -->
+          <div class="resume__job">
+            <div class="resume__section-container">
+              <div class="resume__section-col">
+                <h3>MOGO Korean Fusion Tacos</h3>
+                <p class="resume__job-title"><em>Shift Manager</em></p>
+              </div>
+              <div class="resume__section-col-2">
+                <p>Asbury Park, NJ</p>
+                <p>July – September 2021</p>
+              </div>
+            </div>
+
+            <ul class="resume__list">
+              <li class="resume__list-item">
+                Instituted daily prep list according to anticipated sales and
+                delegated tasks, ensuring smooth kitchen operations throughout
+                the day
+              </li>
+              <li class="resume__list-item">
+                Trained new hires thoroughly to maximize efficiency and team
+                performance
+              </li>
+              <li class="resume__list-item">
+                Motivated employees by celebrating work well done to create a
+                positive and encouraging workplace
+              </li>
+            </ul>
+
+            <div class="resume__section-container">
+              <div class="resume__section-col">
+                <p class="resume__job-title"><em>Front Counter</em></p>
+              </div>
+              <div class="resume__section-col-2">
+                <p>May – July 2021</p>
+              </div>
+            </div>
+
+            <ul class="resume__list">
+              <li class="resume__list-item">
+                Communicated with kitchen to verify complicated orders and
+                satisfy customers
+              </li>
+              <li class="resume__list-item">
+                Completed restocking tasks in between transactions to use
+                downtime constructively
+              </li>
+              <li class="resume__list-item">
+                Ensured thorough cleaning of equipment and surfaces in
+                compliance with health standards
+              </li>
+            </ul>
+          </div>
+
+          <!-- Hatteras -->
+          <div class="resume__job">
+            <div class="resume__section-container">
+              <div class="resume__section-col">
+                <h3>Hatteras Press</h3>
+                <p class="resume__job-title">
+                  <em>Graphic Design and Marketing Intern</em>
+                </p>
+              </div>
+              <div class="resume__section-col-2">
+                <p>Tinton Falls, NJ</p>
+                <p>February – August 2020</p>
+              </div>
+            </div>
+
+            <ul class="resume__list">
+              <li class="resume__list-item">
+                Designed the first-ever company lookbook, showcasing samples of
+                the company’s print capabilities to potential customers
+              </li>
+              <li class="resume__list-item">
+                Created marketing materials and graphics to help local
+                businesses enforce COVID-19 precautions, within 5-day turnaround
+              </li>
+              <li class="resume__list-item">
+                Worked full-time hours remotely during the summer of 2020,
+                emphasizing correspondence with my supervisor and efficient time
+                management
+              </li>
+            </ul>
+          </div>
+          <a href="resume.pdf" target="_blank">link to pdf version</a>
+        </div>
+      </div>
     </main>
 
-
     <footer class="footer" id="footer">
-        <div class="wrapper">
-            <nav>
-                <h2 class="footer__header">Contact</h2>
-                <ul class="footer__list">
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="mailto: jthappiness@gmail.com" target="_blank">Email</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" target="_blank"
-                            href="https://www.linkedin.com/in/jilltracy/">LinkedIn</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" target="_blank"
-                            href="https://github.com/jiitra">github</a>
-                    </li>
-                </ul>
-            </nav>
-            <p>&copy;2022 Jillian Tracy</p>
-        </div>
+      <div class="wrapper">
+        <nav>
+          <h2 class="footer__header">Contact</h2>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a
+                class="footer__list-link"
+                href="mailto: jthappiness@gmail.com"
+                target="_blank"
+                >Email</a
+              >
+            </li>
+            <li class="footer__list-item">
+              <a
+                class="footer__list-link"
+                target="_blank"
+                href="https://www.linkedin.com/in/jilltracy/"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="footer__list-item">
+              <a
+                class="footer__list-link"
+                target="_blank"
+                href="https://github.com/jiitra"
+                >github</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <p>&copy;2022 Jillian Tracy</p>
+      </div>
     </footer>
 
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
