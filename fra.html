@@ -34,29 +34,28 @@
           >jill tracy</a
         >
 
-        <!-- mobile nav -->
-        <nav class="mobile-nav">
-          <a
-            href="javascript:void(0);"
-            class="hamburger-icon"
-            onclick="myFunction()"
-          >
-            <i class="fa fa-bars"></i>
-          </a>
-          <div class="mobile-nav__list-container">
-            <ul class="mobile-nav__list">
-              <li>
-                <a class="header__link" href="about.html">about</a>
-              </li>
-              <li>
-                <a class="header__link" href="resume.html">resume</a>
-              </li>
-              <li>
-                <a class="header__link contact-link" href="#footer">contact</a>
-              </li>
-            </ul>
+       <!-- mobile nav -->
+       <nav class="mobile-nav">
+        <div id="trigger-overlay" class="burger burger-squeeze">
+            <div class="burger-lines"></div>
           </div>
-        </nav>
+        <div class="overlay overlay-slidedown">
+            <div class="burger burger-squeeze open overlay-close">
+                <div class="burger-lines"></div>
+              </div>
+            <ul class="mobile-nav__list">
+                <li>
+                    <a class="header__link mobile-nav__list-item" href="about.html">about</a>
+                </li>
+                <li>
+                    <a class="header__link mobile-nav__list-item" href="resume.html">resume</a>
+                </li>
+                <li>
+                    <a id="closeitem" class="header__link mobile-nav__list-item contact-link" href="#footer">contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
         <!-- desktop nav -->
         <nav class="desktop-nav">

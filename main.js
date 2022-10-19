@@ -39,6 +39,15 @@ contactLink.forEach(element => {
     })
 });
 
+document.querySelector("#trigger-overlay").addEventListener("click", function () {
+	document.querySelector(".overlay").classList.add("open");
+});
+document.querySelector(".overlay-close").addEventListener("click", function () {
+	document.querySelector(".overlay").classList.remove("open");
+});
+document.querySelector("#closeitem").addEventListener("click", function () {
+	document.querySelector(".overlay").classList.remove("open");
+});
 
 if (
     /* This condition checks whether the user has set a site preference for dark mode OR a OS-level preference for Dark Mode AND no site preference */

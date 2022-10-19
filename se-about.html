@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sharingexcess.com — jill tracy</title>
-    <!-- load in first so page loads accurately -->
     <script>
         if (
             localStorage.getItem("color-mode") === "dark" ||
@@ -30,19 +29,22 @@
 
             <!-- mobile nav -->
             <nav class="mobile-nav">
-                <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <div class="mobile-nav__list-container">
+                <div id="trigger-overlay" class="burger burger-squeeze">
+                    <div class="burger-lines"></div>
+                  </div>
+                <div class="overlay overlay-slidedown">
+                    <div class="burger burger-squeeze open overlay-close">
+                        <div class="burger-lines"></div>
+                      </div>
                     <ul class="mobile-nav__list">
                         <li>
-                            <a class="header__link" href="about.html">about</a>
+                            <a class="header__link mobile-nav__list-item" href="about.html">about</a>
                         </li>
                         <li>
-                            <a class="header__link" href="resume.html">resume</a>
+                            <a class="header__link mobile-nav__list-item" href="resume.html">resume</a>
                         </li>
                         <li>
-                            <a class="header__link contact-link" href="#footer">contact</a>
+                            <a id="closeitem" class="header__link mobile-nav__list-item contact-link" href="#footer">contact</a>
                         </li>
                     </ul>
                 </div>
