@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>podcast but outside — jill tracy</title>
-    <!-- load in first so page loads accurately -->
     <script>
       if (
         localStorage.getItem("color-mode") === "dark" ||
@@ -94,16 +93,15 @@
           <h1 class="project__title project__title-case">
             Podcast But Outside
           </h1>
-          <p class="project__caption">10 weeks desktop + 10 weeks responsive | 2021 </p>
-
-          <!-- <div class="project__caption-col">
-                    <div class="pill">
-                        <p class="project__caption">2021</p>
-                    </div>
-                    <div class="pill">
-                        <h3 class="project__caption">Interface Redesign</h3>
-                    </div>
-                </div> -->
+          <p class="project__caption">
+            10 weeks desktop + 10 weeks mobile & tablet | 2021
+          </p>
+          <div class="casestudy__img-container">
+            <picture>
+              <!-- <source media="(max-width:450px)" srcset="img/fra-header-sm.png" /> -->
+              <img class="casestudy__img-single" src="img/pbo-home.gif" />
+            </picture>
+          </div>
           <p class="casestudy__text">
             View live Figma prototype here:
             <a
@@ -187,6 +185,13 @@
           would distract the user from navigating the site.
         </p>
 
+        <p class="casestudy__text">
+          I created a user persona to represent the Podcast But Outside’s target
+          demographic. The profile is based on an overview of fans who interact
+          with the podcast on social media and commenters from the YouTube
+          videos.
+        </p>
+
         <div class="casestudy__img-container">
           <picture>
             <source
@@ -202,11 +207,6 @@
           <p class="casestudy__img-cap">User persona: jonas arnold</p>
         </div>
 
-        <p class="casestudy__text">
-          I created a user persona to represent the Podcast But Outside’s target
-          demographic. The profile is based on an overview of fans who interact
-          with the podcast on social media and on the episodes.
-        </p>
         <p class="casestudy__text">
           Social media marketing is important to this demographic, so I wanted
           to make sure the social icons were more accessible in my redesign.
@@ -239,34 +239,60 @@
             src="img/pbo_tour_promo.jpeg"
           />
           <img class="casestudy__img-single medium" src="img/pbo-table.png" />
-
-          <!-- <p class="casestudy__img-cap">
+          <br />
+          <p class="casestudy__img-cap">
             <br />Photos courtesy of Podcast But Outside
-          </p> -->
+          </p>
         </div>
 
-        <h3 class="project__caption bolder">01. HOME</h3>
+        <p class="casestudy__text">
+          As I began to create the components necessary for the prototype, I
+          drew out the elements on paper and converted them to vector images on
+          Illustrator. This achieved the hand-drawn, one-of-a-kind look that
+          matched the podcast's existing branding.
+        </p>
+
         <div class="casestudy__img-container">
-          <picture>
-            <source
-              media="(max-width:450px)"
-              srcset="img/home-blip-small.jpg"
-            />
-            <source media="(max-width:900px)" srcset="img/home-blip-med.jpg" />
-            <img class="casestudy__img-single" src="img/home-blip.png" />
-          </picture>
-          <p class="casestudy__img-cap">screenshot from the home page</p>
+          <img class="casestudy__img-flex" src="img/cloud-drawings.png" />
+          <img class="casestudy__img-flex" src="img/clouds-02.svg" />
+          <img class="casestudy__img-flex" src="img/clouds-03.svg" />
+          <img class="casestudy__img-flex" src="img/clouds-05.svg" />
+          <p class="casestudy__img-cap">illustrated cloud elements</p>
+        </div>
+
+        <h2 class="casestudy__header">pages</h2>
+        <h3 class="project__caption bolder">home: design</h3>
+        <div class="casestudy__img-container">
+          <img class="casestudy__img-single" src="img/pbo-home-dskmob.png" />
         </div>
         <p class="casestudy__text">
           For the home page, I wanted to visually represent the “outside”
           element of the podcast with the hosts standing in front of an outdoor
-          background. Originally, I wanted to have a slideshow of multiple
-          outside images loop behind the hosts. However, I chose to keep the
-          static clouds background because it was less distracting. I also
-          included cloud graphics in the navigation bar to create cohesion with
-          the motifs.
+          background. After experimenting with a few ideas, I added the cloud
+          background and realized that it had the most potential. From this
+          starting point, I added a green graphic to represent grass, and
+          created a cut-out image of the hosts to place on top. I also included
+          cloud graphics in the navigation bar to further integrate the cloud
+          imagery.
         </p>
-        <h3 class="project__caption bolder">02. LIVE SHOWS</h3>
+        <p class="casestudy__text">
+          At the mobile breakpoint, I removed the grass to simplify the design.
+          Additionally, the mobile home page does not scroll and instead prompts
+          the user to swipe into the interior pages. All the changes on smaller
+          breakpoints were influenced by legibility and simplicity.
+        </p>
+        <h3 class="project__caption bolder">home: interaction</h3>
+        <p class="casestudy__text">
+          The first animation the user sees on the website is the slow cloud
+          movement. This is consistent across all breakpoints and adds a touch
+          of realism and interest to the design.
+        </p>
+        <p class="casestudy__text">
+          On desktop, the pictures in the Merch category rotate on hover. This
+          microinteraction implies clickability and adds personality to the
+          page.
+        </p>
+        <h3 class="project__caption bolder">LIVE SHOWS: design</h3>
         <div class="casestudy__img-container">
           <picture>
             <source
@@ -288,7 +314,9 @@
           on each ticket. I also thought of organizing tour dates by region,
           since buyers are looking for venues closest to them.
         </p>
-        <h3 class="project__caption bolder">03. EPISODES</h3>
+
+        <h3 class="project__caption bolder">LIVE SHOWS: interaction</h3>
+        <h3 class="project__caption bolder">episodes: design</h3>
         <div class="casestudy__img-container">
           <picture>
             <source
@@ -309,8 +337,7 @@
           video collection without overwhelming the user with endless scrolling.
         </p>
 
-        <h2 class="casestudy__header">introducing interaction</h2>
-
+        <h3 class="project__caption bolder">episodes: interaction</h3>
         <h2 class="casestudy__header">Final Result</h2>
         <p class="casestudy__text">
           In my redesign of the Podcast But Outside website, I aimed to

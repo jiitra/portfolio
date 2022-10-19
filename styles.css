@@ -256,6 +256,7 @@ header {
     text-align: center;
     font-weight: 300;
     padding-top: 1.3rem;
+    margin: 0;
 }
 
 .project__cover:hover .project__img{
