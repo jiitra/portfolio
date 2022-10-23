@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sharingexcess.com — jill tracy</title>
+    <title>food rescue app — jill tracy</title>
     <script>
       if (
         localStorage.getItem("color-mode") === "dark" ||
@@ -34,28 +34,37 @@
           >jill tracy</a
         >
 
-       <!-- mobile nav -->
-       <nav class="mobile-nav">
-        <div id="trigger-overlay" class="burger burger-squeeze">
+        <!-- mobile nav -->
+        <nav class="mobile-nav">
+          <div id="trigger-overlay" class="burger burger-squeeze">
             <div class="burger-lines"></div>
           </div>
-        <div class="overlay overlay-slidedown">
+          <div class="overlay overlay-slidedown">
             <div class="burger burger-squeeze open overlay-close">
-                <div class="burger-lines"></div>
-              </div>
+              <div class="burger-lines"></div>
+            </div>
             <ul class="mobile-nav__list">
-                <li>
-                    <a class="header__link mobile-nav__list-item" href="about.html">about</a>
-                </li>
-                <li>
-                    <a class="header__link mobile-nav__list-item" href="resume.html">resume</a>
-                </li>
-                <li>
-                    <a id="closeitem" class="header__link mobile-nav__list-item contact-link" href="#footer">contact</a>
-                </li>
+              <li>
+                <a class="header__link mobile-nav__list-item" href="about.html"
+                  >about</a
+                >
+              </li>
+              <li>
+                <a class="header__link mobile-nav__list-item" href="resume.html"
+                  >resume</a
+                >
+              </li>
+              <li>
+                <a
+                  id="closeitem"
+                  class="header__link mobile-nav__list-item contact-link"
+                  href="#footer"
+                  >contact</a
+                >
+              </li>
             </ul>
-        </div>
-    </nav>
+          </div>
+        </nav>
 
         <!-- desktop nav -->
         <nav class="desktop-nav">
@@ -240,13 +249,14 @@
 
         <h2 class="casestudy__header" id="s3">design system elevation</h2>
         <p class="casestudy__text">
-          Beyond adding a dark mode color scheme, I did a deeper expansion of
+          Beyond adding a dark mode color scheme, I led a deeper expansion of
           the design system. I introduced six shades of red, yellow, and blue,
           naming the colors with a scale of 100-600 for easier identification.
           Then, I mapped those colors to names that remained constant across
-          light and dark mode. I referenced material design guidelines for
-          naming techniques. This way, programmers can name a variable without
-          referring to specific colors.
+          light and dark mode, such as "surface-background" and
+          "element-primary." I referenced material design guidelines for naming
+          techniques. This way, programmers can reference a variable that is
+          descriptive of its purpose, abstracted from the color itself.
         </p>
         <div class="casestudy__img-container">
           <img class="casestudy__img-single" src="img/colors.png" />
@@ -285,8 +295,9 @@
         <p class="casestudy__text">
           Thanks to this design sprint, software changes of both large and small
           scale have been easy for the developers to implement. Having
-          implementable components and the design system as a guide allows us to focus on
-          the user, without getting bogged down by design uncertainties.
+          implementable components and the design system as a guide allows us to
+          focus on the user, without getting bogged down by design
+          uncertainties.
         </p>
         <p class="casestudy__text">
           In the future, this design system can be modified, built upon, and

@@ -56,7 +56,7 @@ main {
 }
 
 header {
-  padding: 1.5rem /*25px*/;
+  padding: 1.5rem 0 5rem 0;
 }
 
 #sticky {
@@ -321,6 +321,8 @@ header {
 
 .header__list-item {
   list-style-type: none;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
 .active {
@@ -376,6 +378,8 @@ header {
 }
 
 .home__intro-cap {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   margin: 1.5rem;
   padding-bottom: 6.25rem;
   text-align: center;
@@ -759,5 +763,9 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
   .smaller {
     max-width: 200px;
+  }
+
+  header{
+    padding: 1.5rem;
   }
 }
