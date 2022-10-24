@@ -56,7 +56,7 @@ main {
 }
 
 header {
-  padding: 1.5rem 0 5rem 0;
+  padding: 1.5rem;
 }
 
 #sticky {
@@ -451,6 +451,7 @@ header {
   justify-content: center;
   gap: 1rem;
   margin: 1rem auto;
+  width: 100%;
 }
 
 .casestudy__img-flex {
@@ -763,9 +764,5 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
   .smaller {
     max-width: 200px;
-  }
-
-  header{
-    padding: 1.5rem;
   }
 }
