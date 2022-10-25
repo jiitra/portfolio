@@ -68,10 +68,6 @@ header {
   margin: 0;
 }
 
-.round {
-  border-radius: 20px;
-}
-
 .sections {
   align-items: flex-start;
   display: flex;
@@ -643,6 +639,10 @@ so when this wrapper is applied, content has nice uniform container and is respo
   border-radius: 20px;
 }
 
+.x-rounded{
+  border-radius: 80px;
+}
+
 .shadow {
   filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.173));
 }
@@ -695,6 +695,9 @@ so when this wrapper is applied, content has nice uniform container and is respo
   margin: 0.75rem auto;
 }
 
+.spacer{
+  margin: 2rem 0;
+}
 /*media queries*/
 @media screen and (max-width: 863px) {
   .casestudy__img-flex {
