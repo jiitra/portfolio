@@ -499,8 +499,8 @@ header {
   grid-template-columns: 40% 60%;
   justify-items: center;
   gap: 2rem;
-  margin: 4rem /*30px*/ 0;
-
+  margin-top: 4rem;
+  margin-bottom: 8rem;
   width: 100%;
 }
 
@@ -725,8 +725,9 @@ so when this wrapper is applied, content has nice uniform container and is respo
 
   .project__container {
     grid-template-columns: 1fr;
+    width: 100%;
   }
-
+  
   .home__intro-cap {
     padding-bottom: 1.25rem;
   }
