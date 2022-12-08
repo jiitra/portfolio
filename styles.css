@@ -108,10 +108,18 @@ header {
     display: none;
 } 
 
-/* .hamburger-icon{
-    color: var(--text-color);
-} */
-
+.reveal{
+  position: relative;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: 0.8s all ease;
+  text-decoration: none;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+  text-decoration: none;
+}
 
 .mobile-nav__list {
   display: flex;
