@@ -110,15 +110,12 @@ header {
 
 .reveal{
   position: relative;
-  -webkit-transform: translateY(40px);
   transform: translateY(40px);
   opacity: 0;
-  -webkit-transition: 0.8s all ease;
   transition: 0.8s all ease;
   text-decoration: none;
 }
 .reveal.active{
-  -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
   text-decoration: none;
