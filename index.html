@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html color-mode="light" lang="en"></html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html color-mode="light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jill tracy</title>
-    <link rel="icon" type="image/png" href="https://www.jilltracymedia.com/img/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="https://www.jilltracymedia.com/img/favicon.png">
 
     <script>
       if (
@@ -18,182 +15,243 @@
         document.documentElement.setAttribute("color-mode", "dark");
       }
     </script>
-    
-    
+
+    <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="header__wrapper">
-            <a class="header__link header__home-link" href="index.html">jill tracy</a>
+      <div class="header__wrapper">
+        <a class="header__link header__home-link" href="index.html"
+          >jill tracy</a
+        >
 
-            <!-- mobile nav -->
-            <nav class="mobile-nav">
-                <div id="trigger-overlay" class="burger burger-squeeze">
-                    <div class="burger-lines"></div>
-                  </div>
-                <div class="overlay overlay-slidedown">
-                    <div class="burger burger-squeeze open overlay-close">
-                        <div class="burger-lines"></div>
-                      </div>
-                    <ul class="mobile-nav__list">
-                        <li>
-                            <a class="header__link mobile-nav__list-item" href="about.html">about</a>
-                        </li>
-                        <li>
-                            <a class="header__link mobile-nav__list-item" href="resume.html">resume</a>
-                        </li>
-                        <li>
-                            <a id="closeitem" class="header__link mobile-nav__list-item contact-link" href="#footer">contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+        <!-- mobile nav -->
+        <nav class="mobile-nav">
+          <div id="trigger-overlay" class="burger burger-squeeze">
+            <div class="burger-lines"></div>
+          </div>
+          <div class="overlay overlay-slidedown">
+            <div class="burger burger-squeeze open overlay-close">
+              <div class="burger-lines"></div>
+            </div>
+            <ul class="mobile-nav__list">
+              <li>
+                <a class="header__link mobile-nav__list-item" href="about.html"
+                  >about</a
+                >
+              </li>
+              <li>
+                <a class="header__link mobile-nav__list-item" href="resume.html"
+                  >resume</a
+                >
+              </li>
+              <li>
+                <a
+                  id="closeitem"
+                  class="header__link mobile-nav__list-item contact-link"
+                  href="#footer"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-            <!-- desktop nav -->
-            <nav class="desktop-nav">
-                <ul class="header__list">
-                    <li class="header__list-item">
-                        <a class="header__link header__list-link" href="about.html">about</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a class="header__link header__list-link" href="resume.html">resume</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a class="header__link header__list-link contact-link" href="#footer">contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <!-- desktop nav -->
+        <nav class="desktop-nav">
+          <ul class="header__list">
+            <li class="header__list-item">
+              <a class="header__link header__list-link" href="about.html"
+                >about</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a class="header__link header__list-link" href="resume.html"
+                >resume</a
+              >
+            </li>
+            <li class="header__list-item">
+              <a
+                class="header__link header__list-link contact-link"
+                href="#footer"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="wrapper">
-        <button class="color-mode__btn js-color-mode__btn">
-            <span class="material-symbols-outlined">
-                dark_mode
-            </span>
-        </button>
-        <div class="home__intro">
-            <div class="home__intro-container">
-                <img class="home__intro-img" alt="Jill's Memoji" src="img/favicon.png" />
-                <h1 class="jill__header">jill tracy</h1>
-            </div>
-            <p class=home__intro-cap>jill of all trades, master of some. undergrad uxid student @ drexel university.</p>
+      <button class="color-mode__btn js-color-mode__btn">
+        <span class="material-symbols-outlined"> dark_mode </span>
+      </button>
+      <div class="home__intro">
+        <div class="home__intro-container">
+          <img
+            class="home__intro-img"
+            alt="Jill's Memoji"
+            src="img/favicon.png"
+          />
+          <h1 class="jill__header">jill tracy</h1>
         </div>
-        <div class="work">
+        <p class="home__intro-cap">
+          jill of all trades, master of some. undergrad uxid student @ drexel
+          university.
+        </p>
+      </div>
+      <div class="work">
+        <h1 class="work__header">my work</h1>
 
-            <h1 class="work__header">my work</h1>
-
-            <div class="project__container reveal">
-
-                <div class="project__text">
-                    <h3 class="project-number">Project 01</h3>
-                    <h2 class="project__title project__title-home">fighting food insecurity</h2>
-                    <p class="project__caption">lead ui/ux design @ sharing excess</p>
-                    <p class="project__description">An all-encompassing redesign.
-                        Includes a design system
-                        expansion, new codebase
-                        framework, and refined
-                        experience flows. </p>
-                </div>
-                <div class="project__cover-container">
-
-                    <div class="project__cover">
-                        <a href="fra.html">
-                            <picture>
-                                <source media="(max-width:450px)" srcset="img/fra-main-sm.png">
-                                <source media="(max-width:900px)" srcset="img/fra-main-med.png">
-                                <img class="project__img"  src="img/fra-main.png">
-                            </picture>
-                        </a>
-                    </div>
-                    <p class="project__img-cap">Click the image for project details</p>
-                </div>
+        <div class="project__container reveal">
+          <div class="project__text">
+            <h3 class="project-number">Project 01</h3>
+            <h2 class="project__title project__title-home">
+              fighting food insecurity
+            </h2>
+            <p class="project__caption">lead ui/ux design @ sharing excess</p>
+            <p class="project__description">
+              An all-encompassing redesign. Includes a design system expansion,
+              new codebase framework, and refined experience flows.
+            </p>
+          </div>
+          <div class="project__cover-container">
+            <div class="project__cover">
+              <a href="fra.html">
+                <picture>
+                  <source
+                    media="(max-width:450px)"
+                    srcset="img/fra-main-sm.png"
+                  />
+                  <source
+                    media="(max-width:900px)"
+                    srcset="img/fra-main-med.png"
+                  />
+                  <img class="project__img" src="img/fra-main.png" />
+                </picture>
+              </a>
             </div>
-            <div class="project__container reveal">
-                <div class="project__text">
-                    <h3 class="project-number">Project 02</h3>
-                    <h2 class="project__title project__title-home">about page expansion</h2>
-                    <p class="project__caption">lead ui/ux design & front-end engineer @ sharing excess</p>
-                    <p class="project__description">Content restructuring and additions. Introducing subpages to the website to improve navigation and share the startup's story.</p>
-                    
-                </div>
-                <div class="project__cover-container">
-
-                    <div class="project__cover">
-                        <a href="se-about.html">
-                            <picture>
-                                <source media="(max-width:450px)" srcset="img/aboutpage-small.png">
-                                <img class="project__img"  alt="About Page Project Cover"
-                                    src="img/aboutpage.png" />
-                            </picture>
-                            
-                        </a>
-                    </div>
-
-                    <p class="project__img-cap">Click the image for project details</p>
-                </div>
+            <p class="project__img-cap">Click the image for project details</p>
+          </div>
+        </div>
+        <div class="project__container reveal">
+          <div class="project__text">
+            <h3 class="project-number">Project 02</h3>
+            <h2 class="project__title project__title-home">
+              about page expansion
+            </h2>
+            <p class="project__caption">
+              lead ui/ux design & front-end engineer @ sharing excess
+            </p>
+            <p class="project__description">
+              Content restructuring and additions. Introducing subpages to the
+              website to improve navigation and share the startup's story.
+            </p>
+          </div>
+          <div class="project__cover-container">
+            <div class="project__cover">
+              <a href="se-about.html">
+                <picture>
+                  <source
+                    media="(max-width:450px)"
+                    srcset="img/aboutpage-small.png"
+                  />
+                  <img
+                    class="project__img"
+                    alt="About Page Project Cover"
+                    src="img/aboutpage.png"
+                  />
+                </picture>
+              </a>
             </div>
 
-            <div class="project__container reveal">
-
-                <div class="project__text">
-                    <h3 class="project-number">Project 03</h3>
-                    <h2 class="project__title project__title-home">podcast but outside</h2>
-                    <p class="project__caption">Interface Redesign prototype, personal project</p>
-                    <p class="project__description">A high-fidelity prototype that embraces the quirky personality of the Podcast But Outside.</p>
-                </div>
-                <div class="project__cover-container">
-
-                    <div class="project__cover">
-                        <a href="pbo.html">
-                            <picture>
-                                <source media="(max-width:450px)" srcset="img/pbo-cover-small.png">
-                                <img class="project__img"  alt="Podcast But Outside Project Cover"
-                                    src="img/pbo-cover.png" />
-                            </picture>
-                            
-                        </a> </div>
-
-                        <p class="project__img-cap">Click the image for project details</p>
-                    </div>
-            </div>
+            <p class="project__img-cap">Click the image for project details</p>
+          </div>
         </div>
 
-            
+        <div class="project__container reveal">
+          <div class="project__text">
+            <h3 class="project-number">Project 03</h3>
+            <h2 class="project__title project__title-home">
+              podcast but outside
+            </h2>
+            <p class="project__caption">
+              Interface Redesign prototype, personal project
+            </p>
+            <p class="project__description">
+              A high-fidelity prototype that embraces the quirky personality of
+              the Podcast But Outside.
+            </p>
+          </div>
+          <div class="project__cover-container">
+            <div class="project__cover">
+              <a href="pbo.html">
+                <picture>
+                  <source
+                    media="(max-width:450px)"
+                    srcset="img/pbo-cover-small.png"
+                  />
+                  <img
+                    class="project__img"
+                    alt="Podcast But Outside Project Cover"
+                    src="img/pbo-cover.png"
+                  />
+                </picture>
+              </a>
+            </div>
 
- 
-
+            <p class="project__img-cap">Click the image for project details</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer" id="footer">
-        <div class="wrapper">
-            <nav>
-                <h2 class="footer__header">Contact</h2>
-                <ul class="footer__list">
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" href="mailto: jthappiness@gmail.com" target="_blank">Email</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" target="_blank"
-                            href="https://www.linkedin.com/in/jilltracy/">LinkedIn</a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a class="footer__list-link" target="_blank"
-                            href="https://github.com/jiitra">github</a>
-                    </li>
-                </ul>
-            </nav>
-            <p>&copy;2022 Jillian Tracy</p>
-        </div>
+      <div class="wrapper">
+        <nav>
+          <h2 class="footer__header">Contact</h2>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a
+                class="footer__list-link"
+                href="mailto: jthappiness@gmail.com"
+                target="_blank"
+                >Email</a
+              >
+            </li>
+            <li class="footer__list-item">
+              <a
+                class="footer__list-link"
+                target="_blank"
+                href="https://www.linkedin.com/in/jilltracy/"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="footer__list-item">
+              <a
+                class="footer__list-link"
+                target="_blank"
+                href="https://github.com/jiitra"
+                >github</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <p>&copy;2022 Jillian Tracy</p>
+      </div>
     </footer>
 
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
